@@ -1,0 +1,751 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sul Odonto | Dentista no Centro de Sapucaia do Sul</title>
+<meta name="description" content="Clínica odontológica na R. Otaviano Silveira, 115, Centro de Sapucaia do Sul. Limpeza, restaurações, canal, implantes, próteses e ortodontia. Agende pelo WhatsApp.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sul Odonto | Dentista no Centro de Sapucaia do Sul">
+<meta property="og:description" content="Modelo de site para a Sul Odonto: tratamentos, avaliações e agendamento direto pelo WhatsApp.">
+<meta property="og:image" content="https://thallesyy.github.io/sul-odonto/fotos/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="theme-color" content="#17305C">
+<link rel="icon" type="image/png" href="fotos/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --marinho:#17305C;
+  --marinho-2:#0F2247;
+  --celeste:#3B8BD4;
+  --celeste-claro:#E4F0FB;
+  --amarelo:#F6D34A;
+  --papel:#F3F7FB;
+  --texto:#22324D;
+  --suave:#56677F;
+  --linha:#D3DFEC;
+  --zap:#1FA855;
+  --zap-esc:#168C45;
+  --raio:16px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:#fff;color:var(--texto);font:400 17px/1.6 Figtree,system-ui,sans-serif}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{color:var(--marinho);margin:0;line-height:1.1;letter-spacing:-.015em}
+h1{font-size:clamp(2.05rem,6.4vw,3.55rem);font-weight:800;letter-spacing:-.025em}
+h2{font-size:clamp(1.65rem,4.4vw,2.5rem);font-weight:800}
+h3{font-size:1.2rem;font-weight:700}
+p{margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+:focus-visible{outline:3px solid var(--amarelo);outline-offset:3px;border-radius:6px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* demo */
+.demo{background:var(--marinho-2);color:#C9D7EA;font-size:.85rem;text-align:center;padding:9px 16px;line-height:1.4}
+.demo b{color:#fff;font-weight:700}
+
+/* topo */
+.topo{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--linha)}
+.topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:68px}
+.marca{text-decoration:none;display:flex;align-items:center;gap:6px}
+.marca .logo{width:50px;height:50px;mix-blend-mode:multiply;margin:-6px -2px -6px -6px}
+.marca .txt{display:flex;flex-direction:column;line-height:1}
+.marca strong{font-size:1.45rem;font-weight:800;color:var(--marinho);letter-spacing:-.01em}
+.marca small{display:flex;align-items:center;gap:6px;font-size:.68rem;font-weight:700;letter-spacing:.32em;color:var(--marinho);margin-top:4px;padding-left:2px}
+.marca small::before,.marca small::after{content:"";height:2px;width:14px;background:var(--celeste);border-radius:2px}
+.menu{display:flex;align-items:center;gap:22px}
+.menu a{text-decoration:none;font-weight:600;font-size:.95rem;color:var(--marinho)}
+.menu a:hover{color:var(--celeste)}
+.menu .so-desk{display:none}
+@media(min-width:860px){.menu .so-desk{display:inline}}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:700 1rem/1 Figtree,sans-serif;text-decoration:none;border-radius:12px;padding:16px 22px;border:0;cursor:pointer;transition:background .15s,transform .15s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-zap{background:var(--zap);color:#fff}
+.btn-zap:hover{background:var(--zap-esc)}
+.btn-zap:active{transform:scale(.98)}
+.btn-linha{background:#fff;color:var(--marinho);box-shadow:inset 0 0 0 2px var(--linha)}
+.btn-linha:hover{box-shadow:inset 0 0 0 2px var(--celeste)}
+.menu a.btn-zap{color:#fff;padding:11px 16px;font-size:.95rem;border-radius:10px}
+
+/* hero */
+.hero{padding:36px 0 56px}
+.hero .wrap{display:grid;gap:32px}
+.hero h1{max-width:15ch}
+.hero .sub{margin-top:18px;font-size:1.1rem;color:var(--suave);max-width:46ch}
+.nota{display:flex;align-items:center;gap:10px;margin-top:22px;font-size:.98rem;color:var(--texto)}
+.estrelas{display:flex;gap:2px}
+.estrelas svg{width:18px;height:18px;fill:#F2B81A}
+.nota b{color:var(--marinho)}
+.acoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.acoes .btn{flex:1 1 220px}
+.endereco{display:flex;gap:8px;align-items:flex-start;margin-top:22px;font-size:.95rem;color:var(--suave)}
+.endereco svg{width:18px;height:18px;flex:none;margin-top:3px;stroke:var(--celeste)}
+.hero-foto{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:4/3.4;background:var(--celeste-claro)}
+.hero-foto img{width:100%;height:100%;object-fit:cover;object-position:30% 32%}
+.hero-foto figcaption{position:absolute;left:14px;bottom:14px;background:rgba(15,34,71,.82);color:#fff;font-size:.85rem;font-weight:600;padding:7px 12px;border-radius:8px}
+@media(min-width:900px){
+  .hero{padding:64px 0 88px}
+  .hero .wrap{grid-template-columns:1.05fr .95fr;align-items:center;gap:56px}
+  .hero-foto{aspect-ratio:4/4.6}
+  .acoes .btn{flex:0 0 auto}
+}
+@media (prefers-reduced-motion:no-preference){
+  .hero-foto img{animation:abrir 1.1s cubic-bezier(.2,.7,.2,1) both}
+  @keyframes abrir{from{clip-path:inset(0 0 100% 0);transform:scale(1.06)}to{clip-path:inset(0 0 0 0);transform:scale(1)}}
+}
+
+/* seções */
+section{scroll-margin-top:80px}
+.secao{padding:64px 0}
+.secao .intro{margin-top:12px;color:var(--suave);max-width:56ch;font-size:1.05rem}
+@media(min-width:900px){.secao{padding:96px 0}}
+
+/* vitrine de tratamentos */
+.vitrine-bg{background:var(--papel)}
+.agenda{display:grid;gap:24px;margin-top:32px}
+@media(min-width:960px){.agenda{grid-template-columns:1.25fr .75fr;align-items:start;gap:32px}}
+.vidro{background:#fff;border:2px solid var(--marinho);border-radius:18px;padding:22px 18px 24px}
+@media(min-width:600px){.vidro{padding:28px 28px 30px}}
+.vidro-topo{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.vidro-topo .marca strong{font-size:1.15rem}
+.vidro-topo p{font-size:.9rem;color:var(--suave)}
+.trats{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media(min-width:600px){.trats{grid-template-columns:repeat(3,1fr)}}
+.trat{display:flex;align-items:center;gap:8px;background:var(--celeste);color:#fff;border:0;border-radius:7px;padding:12px 12px;min-height:50px;font:700 .95rem/1.2 Figtree,sans-serif;text-align:left;cursor:pointer;transition:background .15s,color .15s}
+.trat:hover{background:#2F7BC2}
+.trat .ck{width:18px;height:18px;flex:none;border-radius:50%;box-shadow:inset 0 0 0 2px rgba(255,255,255,.75);display:grid;place-items:center}
+.trat .ck svg{width:12px;height:12px;opacity:0}
+.trat[aria-pressed="true"]{background:var(--amarelo);color:var(--marinho)}
+.trat[aria-pressed="true"] .ck{background:var(--marinho);box-shadow:none}
+.trat[aria-pressed="true"] .ck svg{opacity:1}
+.explica{margin-top:14px;min-height:3.2em;font-size:.95rem;color:var(--suave);border-left:3px solid var(--celeste);padding:2px 0 2px 12px}
+.explica b{color:var(--marinho)}
+.campo{margin-top:22px}
+.campo>span,.campo legend{display:block;font-weight:700;color:var(--marinho);margin-bottom:10px;font-size:1rem;padding:0}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+.dor{display:flex;align-items:center;gap:12px;cursor:pointer;font-weight:600;color:var(--texto);background:#FFF6D6;border-radius:10px;padding:12px 14px}
+.dor input{appearance:none;width:44px;height:26px;flex:none;border-radius:20px;background:#CFD9E6;position:relative;cursor:pointer;transition:background .15s;margin:0}
+.dor input::after{content:"";position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:#fff;transition:transform .15s}
+.dor input:checked{background:#D9534F}
+.dor input:checked::after{transform:translateX(18px)}
+.periodos{display:flex;flex-wrap:wrap;gap:8px}
+.periodos label{flex:1 1 140px}
+.periodos input{position:absolute;opacity:0;pointer-events:none}
+.periodos span{display:block;text-align:center;padding:12px 10px;border-radius:10px;font-weight:600;background:var(--papel);box-shadow:inset 0 0 0 2px var(--linha);cursor:pointer}
+.periodos input:checked+span{background:var(--marinho);color:#fff;box-shadow:none}
+.periodos input:focus-visible+span{outline:3px solid var(--amarelo);outline-offset:2px}
+.campo input[type=text]{width:100%;font:500 1rem Figtree,sans-serif;padding:14px;border-radius:10px;border:2px solid var(--linha);background:#fff;color:var(--texto)}
+.campo input[type=text]:focus{border-color:var(--celeste);outline:none}
+
+/* cartão de agendamento */
+.cartao-col{position:sticky;top:88px}
+.cartao{background:#FFFDF6;border-radius:14px;border:1px solid #E7DFC6;box-shadow:0 1px 0 #E7DFC6,0 18px 40px -24px rgba(23,48,92,.45);padding:20px 20px 18px;position:relative}
+.cartao::before{content:"";position:absolute;top:0;left:20px;right:20px;height:6px;background:repeating-linear-gradient(90deg,var(--celeste) 0 18px,transparent 18px 26px);border-radius:0 0 4px 4px}
+.cartao-cab{display:flex;justify-content:space-between;align-items:flex-end;gap:10px;padding:10px 0 12px;border-bottom:2px solid var(--marinho)}
+.cartao-cab .marca strong{font-size:1.1rem}
+.cartao-cab small{font-size:.75rem;font-weight:700;color:var(--suave);text-align:right;line-height:1.3}
+.linha-c{display:grid;grid-template-columns:96px 1fr;gap:8px;align-items:end;padding:12px 0 4px;border-bottom:1.5px dotted #B9C4D3}
+.linha-c dt{font-size:.8rem;font-weight:700;color:var(--suave)}
+.linha-c dd{margin:0;font:600 1.45rem/1.15 Caveat,cursive;color:#1C3F8A;min-height:1.2em;word-break:break-word}
+.linha-c dd.vazio{color:#A9B4C4}
+.linha-c.urg dd{color:#C0392B}
+.linha-c[hidden]{display:none}
+@media (prefers-reduced-motion:no-preference){
+  .escreve{animation:tinta .45s ease-out}
+  @keyframes tinta{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+}
+.cartao .btn{width:100%;margin-top:18px}
+.cartao .obs{margin-top:10px;font-size:.82rem;color:var(--suave);text-align:center}
+
+/* próteses */
+.proteses{display:grid;gap:32px;align-items:center}
+@media(min-width:900px){.proteses{grid-template-columns:1fr 1fr;gap:56px}}
+.proteses ul{margin:20px 0 0;padding:0;list-style:none;display:grid;gap:12px}
+.proteses li{display:flex;gap:12px;align-items:flex-start}
+.proteses li svg{width:22px;height:22px;flex:none;margin-top:2px}
+.proteses li b{color:var(--marinho)}
+.fotos-pro{display:grid;grid-template-columns:1.2fr .8fr;gap:12px}
+.fotos-pro img{width:100%;height:100%;object-fit:cover;border-radius:14px}
+.fotos-pro .alta{aspect-ratio:3/4}
+.fotos-pro .pilha{display:grid;gap:12px;grid-template-rows:1fr 1fr}
+.fotos-pro .pilha img{aspect-ratio:auto}
+.fotos-pro .cartaz{background:var(--marinho);color:#fff;border-radius:14px;padding:16px;display:flex;flex-direction:column;justify-content:flex-end;font-weight:700;font-size:1.05rem;line-height:1.3}
+.fotos-pro .cartaz small{display:block;font-weight:500;color:#B9CBE4;font-size:.85rem;margin-top:6px}
+
+/* antes e depois: bloco removível */
+.caso{margin-top:48px;display:grid;gap:20px;align-items:center;background:var(--celeste-claro);border-radius:20px;padding:20px}
+@media(min-width:760px){.caso{grid-template-columns:320px 1fr;padding:28px;gap:32px}}
+.caso img{border-radius:12px;width:100%;aspect-ratio:1/1;object-fit:cover}
+.caso p{color:var(--texto)}
+.caso small{display:block;margin-top:10px;color:var(--suave);font-size:.85rem}
+
+/* avaliações */
+.aval-bg{background:var(--marinho);color:#DCE6F4}
+.aval-bg h2{color:#fff}
+.aval-bg .intro{color:#B9CBE4}
+.aval-topo{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:flex-end;justify-content:space-between}
+.aval-topo a{color:#fff;font-weight:700;text-underline-offset:4px}
+.depo{margin:36px 0 0;padding:0;list-style:none;columns:1;column-gap:28px}
+@media(min-width:760px){.depo{columns:2}}
+@media(min-width:1040px){.depo{columns:3}}
+.depo li{break-inside:avoid;margin:0 0 28px;padding-left:18px;border-left:3px solid var(--amarelo)}
+.depo q{display:block;font-size:1.08rem;line-height:1.55;color:#fff;quotes:"“" "”"}
+.depo cite{display:block;margin-top:8px;font-style:normal;font-size:.88rem;color:#9FB4D3}
+
+/* visite */
+.visite{display:grid;gap:32px}
+@media(min-width:900px){.visite{grid-template-columns:.9fr 1.1fr;gap:48px}}
+.dados{margin-top:24px;display:grid;gap:20px}
+.dados h3{font-size:1rem;margin-bottom:6px}
+.horas{width:100%;border-collapse:collapse;font-size:.98rem}
+.horas td{padding:7px 0;border-bottom:1px solid var(--linha)}
+.horas td:last-child{text-align:right;font-weight:600;color:var(--marinho)}
+.horas tr.hoje td{color:var(--celeste);font-weight:700}
+.selo{display:inline-flex;gap:8px;align-items:center;font-size:.92rem;font-weight:600;color:var(--marinho);background:var(--celeste-claro);padding:8px 12px;border-radius:8px}
+.selo svg{width:18px;height:18px}
+.visite .acoes{margin-top:8px}
+.mapa-col{display:grid;gap:12px}
+.fachada{border-radius:18px;overflow:hidden;aspect-ratio:2/1}
+.fachada img{width:100%;height:100%;object-fit:cover;object-position:50% 8%}
+.mapa{border:0;width:100%;height:300px;border-radius:18px;background:var(--papel)}
+.mini{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.mini img{border-radius:14px;aspect-ratio:4/3;object-fit:cover;width:100%}
+.mini a{display:flex;flex-direction:column;justify-content:center;gap:6px;background:var(--papel);border-radius:14px;padding:16px;text-decoration:none;font-weight:700;color:var(--marinho)}
+.mini a small{font-weight:500;color:var(--suave)}
+.mini a svg{width:26px;height:26px}
+
+/* rodapé */
+.rodape{background:var(--marinho-2);color:#AFC0D8;padding:40px 0 110px;font-size:.92rem}
+.rodape .wrap{display:grid;gap:18px}
+.rodape .marca strong,.rodape .marca small{color:#fff}
+.rodape .marca .logo{mix-blend-mode:normal;background:#fff;border-radius:12px;margin:0 6px 0 0;padding:2px}
+.rodape a{color:#fff}
+.credito{border-top:1px solid rgba(255,255,255,.12);padding-top:18px}
+
+/* botão flutuante */
+.flutua{position:fixed;right:16px;bottom:16px;z-index:30;width:60px;height:60px;border-radius:50%;background:var(--zap);display:grid;place-items:center;box-shadow:0 10px 24px -8px rgba(0,0,0,.45)}
+.flutua svg{width:32px;height:32px;fill:#fff}
+
+/* ===== animações ===== */
+.nw{white-space:nowrap}
+.w{display:inline-block}
+.faisca-forma{clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);background:var(--amarelo)}
+
+/* mascote sobre a foto */
+.hero-visual{position:relative}
+.hero-visual::before{content:"";position:absolute;inset:18px -10px -14px 22px;background:var(--celeste-claro);border-radius:26px;transform:rotate(3deg);z-index:-1}
+.mascote{position:absolute;top:-34px;left:-4px;width:108px;height:108px;border-radius:50%;background:#fff;box-shadow:0 0 0 4px var(--marinho),0 14px 30px -10px rgba(15,34,71,.5);display:grid;place-items:center;z-index:2;cursor:pointer}
+.mascote img{width:92%;height:92%;mix-blend-mode:multiply}
+.mascote .bl{position:absolute;width:20px;height:20px}
+.mascote .bl:nth-of-type(1){top:-10px;left:-6px}
+.mascote .bl:nth-of-type(2){top:18px;right:-18px;width:14px;height:14px}
+.mascote .bl:nth-of-type(3){bottom:-6px;left:10px;width:12px;height:12px}
+@media(min-width:900px){.mascote{width:150px;height:150px;top:-44px;left:auto;right:-28px}}
+@media(max-width:899px){.hero-foto figcaption{left:auto;right:14px}.hero .wrap{gap:58px}}
+
+/* faixa de tratamentos */
+.fita{background:var(--marinho);overflow:hidden;padding:15px 0;border-top:4px solid var(--amarelo)}
+.fita-trilho{display:flex;align-items:center;gap:22px;width:max-content;padding-left:22px}
+.fita span{color:#fff;font-weight:800;font-size:1.15rem;white-space:nowrap;letter-spacing:-.01em}
+.fita i{width:16px;height:16px;flex:none}
+
+/* faíscas ao tocar no tratamento */
+.trat{position:relative}
+.faisca{position:absolute;left:var(--x);top:var(--y);width:14px;height:14px;pointer-events:none;z-index:3;background:var(--marinho)}
+.faisca:nth-of-type(odd){background:var(--celeste);width:11px;height:11px}
+
+/* carimbo do cartão */
+.carimbo{position:absolute;right:16px;bottom:120px;padding:8px 12px;border:3px double #2D5FA8;color:#2D5FA8;border-radius:8px;font:800 .78rem/1.15 Figtree,sans-serif;letter-spacing:.08em;text-align:center;transform:rotate(-12deg);opacity:0;pointer-events:none;background:rgba(255,253,246,.6)}
+.carimbo.on{opacity:.9}
+
+/* comparador antes e depois */
+.comparador{position:relative;aspect-ratio:1179/540;border-radius:14px;overflow:hidden;--pos:50%;user-select:none;touch-action:pan-y;background:#ddd}
+.comparador .ca{position:absolute;inset:0;background-image:url(fotos/antes-depois.jpg);background-size:100% auto;background-repeat:no-repeat}
+.comparador .antes{background-position:50% 0}
+.comparador .depois{background-position:50% 100%;clip-path:inset(0 0 0 var(--pos))}
+.comparador .tag{position:absolute;top:10px;font-size:.78rem;font-weight:800;padding:5px 10px;border-radius:6px;z-index:2}
+.comparador .t-antes{left:10px;background:rgba(15,34,71,.82);color:#fff}
+.comparador .t-depois{right:10px;background:var(--amarelo);color:var(--marinho)}
+.comparador .alca{position:absolute;top:0;bottom:0;left:var(--pos);width:3px;margin-left:-1.5px;background:#fff;z-index:2;box-shadow:0 0 0 1px rgba(15,34,71,.25)}
+.comparador .alca span{position:absolute;top:50%;left:50%;width:42px;height:42px;margin:-21px 0 0 -21px;border-radius:50%;background:#fff;box-shadow:0 4px 14px rgba(15,34,71,.35);display:grid;place-items:center}
+.comparador .alca span::before{content:"‹ ›";font:800 20px/1 Figtree,sans-serif;color:var(--marinho);margin-top:-2px}
+.comparador input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0;z-index:3}
+.comparador:focus-within{outline:3px solid var(--amarelo);outline-offset:3px}
+@media(min-width:760px){.caso{grid-template-columns:440px 1fr}}
+
+@media (prefers-reduced-motion:no-preference){
+  /* abertura */
+  .anima-h1 .w{animation:sobe .75s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i) * 70ms + .1s)}
+  @keyframes sobe{from{opacity:0;transform:translateY(.55em) rotate(5deg)}to{opacity:1;transform:none}}
+  .entra{animation:aparece .7s ease-out both;animation-delay:var(--d,.6s)}
+  @keyframes aparece{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  .estrelas svg{animation:acende .45s cubic-bezier(.3,1.6,.5,1) both;animation-delay:calc(var(--i) * 120ms + .9s)}
+  @keyframes acende{from{fill:#D5DEEA;transform:scale(.4)}to{fill:#F2B81A;transform:scale(1)}}
+  .mascote{animation:pula .8s cubic-bezier(.3,1.7,.5,1) 1s both,flutua 3.6s ease-in-out 1.8s infinite alternate}
+  @keyframes pula{from{transform:scale(0) rotate(-35deg)}to{transform:scale(1) rotate(0)}}
+  @keyframes flutua{from{transform:translateY(0) rotate(-3deg)}to{transform:translateY(-8px) rotate(4deg)}}
+  .mascote.mexe{animation:mexe .6s ease-in-out}
+  @keyframes mexe{0%,100%{transform:rotate(0)}20%{transform:rotate(-14deg) scale(1.06)}45%{transform:rotate(12deg)}70%{transform:rotate(-6deg)}}
+  .mascote .bl{animation:pisca 2.2s ease-in-out infinite}
+  .mascote .bl:nth-of-type(2){animation-delay:.7s}
+  .mascote .bl:nth-of-type(3){animation-delay:1.4s}
+  @keyframes pisca{0%,100%{transform:scale(0) rotate(0);opacity:0}45%{transform:scale(1) rotate(90deg);opacity:1}70%{transform:scale(.6) rotate(140deg);opacity:.6}}
+  /* brilho no botão principal */
+  .btn-brilho{position:relative;overflow:hidden}
+  .btn-brilho::after{content:"";position:absolute;top:-20%;bottom:-20%;width:38%;left:-60%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-18deg);animation:reluz 3.6s ease-in-out 2.2s infinite}
+  @keyframes reluz{0%{left:-60%}35%,100%{left:130%}}
+  /* faixa */
+  .fita-trilho{animation:corre 38s linear infinite}
+  @keyframes corre{to{transform:translateX(-50%)}}
+  .fita i{animation:gira 3s linear infinite}
+  @keyframes gira{to{transform:rotate(360deg)}}
+  /* surgir ao rolar */
+  .js-anima [data-rev]{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+  .js-anima [data-rev=esq]{transform:translateX(-26px)}
+  .js-anima [data-rev=clip]{opacity:1;transform:none;clip-path:inset(0 0 100% 0);transition:clip-path 1.1s cubic-bezier(.2,.8,.2,1)}
+  .js-anima [data-rev].visto{opacity:1;transform:none;clip-path:inset(0 0 0 0)}
+  .js-anima .trats .trat{opacity:0;transform:translateY(12px) scale(.9);transition:opacity .45s ease,transform .45s cubic-bezier(.3,1.5,.5,1),background .15s,color .15s;transition-delay:calc(var(--i) * 55ms),calc(var(--i) * 55ms),0s,0s}
+  .js-anima .trats.visto .trat{opacity:1;transform:none}
+  .trat.pop{animation:pop .4s cubic-bezier(.3,1.6,.5,1)}
+  @keyframes pop{0%{transform:scale(1)}35%{transform:scale(.92)}70%{transform:scale(1.06)}100%{transform:scale(1)}}
+  .faisca{animation:voa .7s ease-out forwards}
+  @keyframes voa{from{transform:translate(-50%,-50%) scale(.4) rotate(0);opacity:1}to{transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(1.1) rotate(160deg);opacity:0}}
+  .carimbo.on{animation:carimba .5s cubic-bezier(.3,1.4,.5,1)}
+  @keyframes carimba{0%{opacity:0;transform:scale(2.4) rotate(-30deg)}60%{opacity:1;transform:scale(.92) rotate(-11deg)}100%{opacity:.9;transform:scale(1) rotate(-12deg)}}
+  .cartao.treme{animation:treme .35s ease-out}
+  @keyframes treme{30%{transform:translateY(3px)}60%{transform:translateY(-1px)}}
+  .cartao.pronto .btn-zap{animation:chama 1.8s ease-out infinite}
+  @keyframes chama{0%{box-shadow:0 0 0 0 rgba(31,168,85,.55)}70%,100%{box-shadow:0 0 0 14px rgba(31,168,85,0)}}
+  .flutua::before{content:"";position:absolute;inset:0;border-radius:50%;background:var(--zap);animation:onda 2.6s ease-out infinite;z-index:-1}
+  @keyframes onda{from{transform:scale(1);opacity:.55}to{transform:scale(1.7);opacity:0}}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="zap" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2a9.9 9.9 0 0 0-8.5 15l-1.4 5.1 5.24-1.37A9.9 9.9 0 1 0 12.04 2Zm0 18.1a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3.1.82.83-3.03-.2-.31a8.2 8.2 0 1 1 6.95 3.84Zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.22-.08-.39-.12-.55.12-.16.25-.63.8-.78.97-.14.16-.29.18-.53.06a6.7 6.7 0 0 1-3.32-2.9c-.25-.43.25-.4.71-1.33.08-.16.04-.3-.02-.43l-.75-1.82c-.2-.48-.4-.41-.55-.42h-.47a.9.9 0 0 0-.65.3 2.74 2.74 0 0 0-.86 2.04 4.76 4.76 0 0 0 1 2.53 10.9 10.9 0 0 0 4.18 3.69c1.56.67 2.17.73 2.95.61.47-.07 1.46-.6 1.66-1.17.2-.58.2-1.07.15-1.17-.06-.1-.22-.16-.47-.28Z"/></symbol>
+  <symbol id="estrela" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></symbol>
+  <symbol id="check" viewBox="0 0 24 24"><path fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="pino" viewBox="0 0 24 24"><path fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke-width="2"/></symbol>
+  <symbol id="ok" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#E4F0FB"/><path fill="none" stroke="#3B8BD4" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M7.5 12.5l3 3 6-6.5"/></symbol>
+</svg>
+
+<div class="demo"><b>Modelo de demonstração</b> feito por Thales dos Santos Leal para a Sul Odonto.</div>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio" aria-label="Sul Odonto, início"><img class="logo" src="fotos/logo.png" alt="" width="640" height="641"><span class="txt"><strong>Sul Odonto</strong><small>DENTISTA</small></span></a>
+    <nav class="menu" aria-label="Principal">
+      <a class="so-desk" href="#tratamentos">Tratamentos</a>
+      <a class="so-desk" href="#proteses">Próteses</a>
+      <a class="so-desk" href="#avaliacoes">Avaliações</a>
+      <a class="so-desk" href="#visite">Como chegar</a>
+      <a class="btn btn-zap" href="https://wa.me/5551991465694?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Sul%20Odonto%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#zap"/></svg>WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1 class="anima-h1"><span class="w" style="--i:0">Dentista</span> <span class="w" style="--i:1">no</span> <span class="w" style="--i:2">Centro</span> <span class="w" style="--i:3">de</span> <span class="w" style="--i:4">Sapucaia,</span> <span class="w" style="--i:5">do</span> <span class="w nw" style="--i:6">check-up</span> <span class="w" style="--i:7">à</span> <span class="w" style="--i:8">prótese.</span></h1>
+      <p class="sub entra" style="--d:.7s">Limpeza, restaurações, canal, implantes, próteses e aparelho no mesmo endereço. Agende sua avaliação direto pelo WhatsApp.</p>
+      <div class="nota entra" style="--d:.85s">
+        <span class="estrelas" aria-hidden="true"><svg style="--i:0"><use href="#estrela"/></svg><svg style="--i:1"><use href="#estrela"/></svg><svg style="--i:2"><use href="#estrela"/></svg><svg style="--i:3"><use href="#estrela"/></svg><svg style="--i:4"><use href="#estrela"/></svg></span>
+        <span><b>4,9 no Google</b>, com <span data-conta="62">62</span> avaliações</span>
+      </div>
+      <div class="acoes entra" style="--d:1s">
+        <a class="btn btn-zap btn-brilho" href="https://wa.me/5551991465694?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Sul%20Odonto%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#zap"/></svg>Agendar pelo WhatsApp</a>
+        <a class="btn btn-linha" href="#tratamentos">Ver tratamentos</a>
+      </div>
+      <p class="endereco entra" style="--d:1.15s"><svg aria-hidden="true"><use href="#pino"/></svg>R. Otaviano Silveira, 115, Centro. Segunda a sexta das 9h às 19h, sábado das 9h às 12h.</p>
+    </div>
+    <div class="hero-visual">
+      <figure class="hero-foto" style="margin:0">
+        <img src="fotos/recepcao.jpg" width="1200" height="1600" alt="Recepção da Sul Odonto, com o logo da clínica na parede e poltronas de espera" fetchpriority="high">
+        <figcaption>Nossa recepção</figcaption>
+      </figure>
+      <div class="mascote" id="mascote" aria-hidden="true">
+        <img src="fotos/logo.png" alt="" width="640" height="641">
+        <i class="bl faisca-forma"></i><i class="bl faisca-forma"></i><i class="bl faisca-forma"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="fita" aria-hidden="true">
+  <div class="fita-trilho">
+    <span>Limpeza</span><i class="faisca-forma"></i><span>Clareamento</span><i class="faisca-forma"></i><span>Restaurações</span><i class="faisca-forma"></i><span>Tratamento de canal</span><i class="faisca-forma"></i><span>Extração de sisos</span><i class="faisca-forma"></i><span>Implantes</span><i class="faisca-forma"></i><span>Próteses</span><i class="faisca-forma"></i><span>Facetas em resina</span><i class="faisca-forma"></i><span>Ortodontia</span><i class="faisca-forma"></i><span>Periodontia</span><i class="faisca-forma"></i>
+    <span>Limpeza</span><i class="faisca-forma"></i><span>Clareamento</span><i class="faisca-forma"></i><span>Restaurações</span><i class="faisca-forma"></i><span>Tratamento de canal</span><i class="faisca-forma"></i><span>Extração de sisos</span><i class="faisca-forma"></i><span>Implantes</span><i class="faisca-forma"></i><span>Próteses</span><i class="faisca-forma"></i><span>Facetas em resina</span><i class="faisca-forma"></i><span>Ortodontia</span><i class="faisca-forma"></i><span>Periodontia</span><i class="faisca-forma"></i>
+  </div>
+</div>
+
+<section class="secao vitrine-bg" id="tratamentos">
+  <div class="wrap">
+    <h2>O que você precisa?</h2>
+    <p class="intro">Toque nos tratamentos e escolha o melhor horário. O cartão de agendamento vai sendo preenchido, e a mensagem chega pronta no WhatsApp da clínica.</p>
+
+    <div class="agenda">
+      <div class="vidro">
+        <div class="vidro-topo">
+          <span class="marca" aria-hidden="true"><img class="logo" src="fotos/logo.png" alt="" width="640" height="641"><span class="txt"><strong>Sul Odonto</strong><small>DENTISTA</small></span></span>
+          <p>Pode escolher mais de um</p>
+        </div>
+        <div class="trats" role="group" aria-label="Tratamentos">
+          <button type="button" class="trat" aria-pressed="false" data-t="Limpeza" data-d="remove o tártaro e a placa bacteriana. O ideal é fazer a cada 6 meses."><span class="ck"><svg><use href="#check"/></svg></span>Limpeza</button>
+          <button type="button" class="trat" aria-pressed="false" data-t="Clareamento" data-d="deixa os dentes mais brancos, com acompanhamento do dentista."><span class="ck"><svg><use href="#check"/></svg></span>Clareamento</button>
+          <button type="button" class="trat" aria-pressed="false" data-t="Restaurações" data-d="conserta dente com cárie ou lascado, na cor do próprio dente."><span class="ck"><svg><use href="#check"/></svg></span>Restaurações</button>
+          <button type="button" class="trat" aria-pressed="false" data-t="Tratamento de canal" data-d="trata o nervo inflamado ou infeccionado e salva o dente."><span class="ck"><svg><use href="#check"/></svg></span>Tratamento de canal</button>
+          <button type="button" class="trat" aria-pressed="false" data-t="Extração de siso" data-d="retira o siso quando ele dói, inflama ou não tem espaço para nascer."><span class="ck"><svg><use href="#check"/></svg></span>Extração de sisos</button>
+          <button type="button" class="trat" aria-pressed="false" data-t="Implantes" data-d="um pino de titânio substitui a raiz do dente perdido e recebe um dente novo por cima."><span class="ck"><svg><use href="#check"/></svg></span>Implantes</button>
+          <button type="button" class="trat" aria-pressed="false" data-t="Próteses" data-d="dentadura e prótese parcial feitas sob medida para cada paciente."><span class="ck"><svg><use href="#check"/></svg></span>Próteses</button>
+          <button type="button" class="trat" aria-pressed="false" data-t="Facetas em resina" data-d="corrigem cor, formato e pequenos espaços entre os dentes."><span class="ck"><svg><use href="#check"/></svg></span>Facetas em resina</button>
+          <button type="button" class="trat" aria-pressed="false" data-t="Ortodontia (aparelho)" data-d="aparelho para alinhar os dentes e corrigir a mordida."><span class="ck"><svg><use href="#check"/></svg></span>Ortodontia</button>
+          <button type="button" class="trat" aria-pressed="false" data-t="Periodontia (gengiva)" data-d="tratamento da gengiva que sangra, incha ou está retraindo."><span class="ck"><svg><use href="#check"/></svg></span>Periodontia</button>
+        </div>
+        <p class="explica" id="explica" aria-live="polite">Não sabe qual é o seu caso? Tudo bem: sem escolher nada, a mensagem pede uma avaliação.</p>
+
+        <div class="campo">
+          <label class="dor"><input type="checkbox" id="dor"> Estou com dor, é urgente</label>
+        </div>
+
+        <fieldset class="campo">
+          <legend>Melhor horário</legend>
+          <div class="periodos">
+            <label><input type="radio" name="periodo" value="manhã"><span>Manhã</span></label>
+            <label><input type="radio" name="periodo" value="tarde"><span>Tarde</span></label>
+            <label><input type="radio" name="periodo" value="sábado de manhã"><span>Sábado de manhã</span></label>
+          </div>
+        </fieldset>
+
+        <label class="campo">
+          <span>Seu nome</span>
+          <input type="text" id="nome" autocomplete="given-name" placeholder="Como podemos te chamar?">
+        </label>
+      </div>
+
+      <div class="cartao-col">
+        <div class="cartao" aria-labelledby="cartao-tit">
+          <div class="cartao-cab">
+            <span class="marca" aria-hidden="true"><img class="logo" src="fotos/logo.png" alt="" width="640" height="641"><span class="txt"><strong>Sul Odonto</strong><small>DENTISTA</small></span></span>
+            <small id="cartao-tit">Cartão de<br>agendamento</small>
+          </div>
+          <dl style="margin:0">
+            <div class="linha-c"><dt>Tratamento</dt><dd id="c-trat" class="vazio">avaliação</dd></div>
+            <div class="linha-c urg" id="l-urg" hidden><dt>Urgência</dt><dd id="c-urg">estou com dor</dd></div>
+            <div class="linha-c"><dt>Horário</dt><dd id="c-per" class="vazio">qualquer um</dd></div>
+            <div class="linha-c"><dt>Nome</dt><dd id="c-nome" class="vazio">...</dd></div>
+          </dl>
+          <div class="carimbo" id="carimbo" aria-hidden="true">PRONTO PRA<br>ENVIAR</div>
+          <a class="btn btn-zap" id="enviar" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#zap"/></svg>Enviar pelo WhatsApp</a>
+          <p class="obs">Abre o WhatsApp da clínica com a mensagem pronta. É só tocar em enviar.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="secao" id="proteses">
+  <div class="wrap">
+    <div class="proteses">
+      <div>
+        <h2>Prótese feita sob medida, do molde à entrega.</h2>
+        <p class="intro">A clínica faz próteses sob medida para cada paciente. Na avaliação, o dentista mostra as opções para o seu caso e explica cada etapa.</p>
+        <ul>
+          <li><svg aria-hidden="true"><use href="#ok"/></svg><span><b>Prótese total (dentadura)</b>, superior e inferior, para quem perdeu todos os dentes.</span></li>
+          <li><svg aria-hidden="true"><use href="#ok"/></svg><span><b>Prótese parcial removível</b>, que repõe alguns dentes e se prende nos que ficaram.</span></li>
+        </ul>
+        <div class="acoes"><a class="btn btn-zap" href="https://wa.me/5551991465694?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Sul%20Odonto%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20pr%C3%B3tese." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#zap"/></svg>Quero avaliar minha prótese</a></div>
+      </div>
+      <div class="fotos-pro">
+        <img class="alta" src="fotos/protese-superior.jpg" width="1200" height="1600" loading="lazy" alt="Prótese superior pronta, segurada por uma mão de luva">
+        <div class="pilha">
+          <img src="fotos/protese-total.jpg" width="1200" height="1600" loading="lazy" alt="Par de próteses totais, superior e inferior, sobre a bancada">
+          <div class="cartaz">“Estou muito satisfeita com o cumprimento das datas e a qualidade da prótese.”<small>Zilma, no Google</small></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOCO ANTES E DEPOIS: remover se a clínica não tiver autorização do paciente -->
+    <div class="caso" id="antes-depois" data-rev>
+      <div class="comparador" id="comparador">
+        <div class="ca antes" role="img" aria-label="Antes: boca com poucos dentes"></div>
+        <div class="ca depois" role="img" aria-label="Depois: sorriso completo com a prótese"></div>
+        <span class="tag t-antes">Antes</span><span class="tag t-depois">Depois</span>
+        <div class="alca" aria-hidden="true"><span></span></div>
+        <input type="range" min="0" max="100" value="50" aria-label="Arraste para comparar antes e depois">
+      </div>
+      <div>
+        <h3>Antes e depois de um caso da clínica</h3>
+        <p style="margin-top:8px">Arraste a barra para comparar: à esquerda, a paciente antes do tratamento; à direita, o sorriso com a prótese pronta.</p>
+        <small>Imagem publicada pela Sul Odonto no Google, com o logo da clínica.</small>
+      </div>
+    </div>
+    <!-- FIM DO BLOCO ANTES E DEPOIS -->
+  </div>
+</section>
+
+<section class="secao aval-bg" id="avaliacoes">
+  <div class="wrap">
+    <div class="aval-topo">
+      <div>
+        <h2>Nota 4,9 em <span data-conta="62" data-ver>62</span> avaliações no Google</h2>
+        <p class="intro">Algumas das coisas que os pacientes escreveram sobre a clínica.</p>
+      </div>
+      <a href="https://www.google.com/maps/place/Sul+Odonto+-+Dentista+-+Cl%C3%ADnica+Odontol%C3%B3gica+Sapucaia+do+Sul/@-29.8222829,-51.1495856,17z/data=!4m6!3m5!1s0x95196f323930031f:0xad61fd676f4567ad!8m2!3d-29.8222829!4d-51.1495856!16s%2Fg%2F11bwn587xm" target="_blank" rel="noopener">Ver todas no Google</a>
+    </div>
+    <ul class="depo">
+      <li><q>Desde a recepção até os atendimentos com a dentista, foi tudo impecável. Concluí meu tratamento e logo já vou iniciar o da minha filha.</q><cite>Larissa, no Google</cite></li>
+      <li><q>Estou morando em outra cidade, vou a Sapucaia somente para consulta com ele.</q><cite>Avaliação no Google</cite></li>
+      <li><q>Muito bom atendimento, desde a recepção até a Dra. Débora. Super recomendo.</q><cite>Altemir, no Google</cite></li>
+      <li><q>Ótimo, sempre muito atenciosos e cuidadosos, ótimos profissionais.</q><cite>Avaliação no Google</cite></li>
+      <li><q>Excelente, profissional, competente e atenciosa, clínica top.</q><cite>Rodolfo, no Google</cite></li>
+      <li><q>Estou muito satisfeita com o trabalho realizado, com o atendimento, cumprimento das datas e qualidade da prótese que adquiri.</q><cite>Zilma, no Google</cite></li>
+    </ul>
+  </div>
+</section>
+
+<section class="secao" id="visite">
+  <div class="wrap">
+    <div class="visite">
+      <div>
+        <h2>Venha conhecer a clínica</h2>
+        <p class="intro">A clínica fica no Centro de Sapucaia, na R. Otaviano Silveira.</p>
+        <div class="dados">
+          <div>
+            <h3>Endereço</h3>
+            <p>R. Otaviano Silveira, 115, Centro<br>Sapucaia do Sul, RS, 93214-500</p>
+          </div>
+          <div>
+            <h3>Horário</h3>
+            <table class="horas" id="horas">
+              <tr data-d="1,2,3,4,5"><td>Segunda a sexta</td><td>9h às 19h</td></tr>
+              <tr data-d="6"><td>Sábado</td><td>9h às 12h</td></tr>
+              <tr data-d="0"><td>Domingo</td><td>Fechado</td></tr>
+            </table>
+          </div>
+          <div><span class="selo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#17305C" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="4.5" r="1.8"/><path d="M12 7v6h5l2 5"/><path d="M8.5 10.5a5.5 5.5 0 1 0 6.6 8.3"/></svg>Entrada acessível para cadeira de rodas</span></div>
+          <div class="acoes">
+            <a class="btn btn-zap" href="https://wa.me/5551991465694?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Sul%20Odonto%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#zap"/></svg>(51) 99146-5694</a>
+            <a class="btn btn-linha" href="https://www.google.com/maps/dir/?api=1&amp;destination=Sul+Odonto+R.+Otaviano+Silveira+115+Sapucaia+do+Sul" target="_blank" rel="noopener">Como chegar</a>
+          </div>
+        </div>
+      </div>
+      <div class="mapa-col">
+        <div class="fachada"><img src="fotos/fachada.jpg" width="1195" height="896" loading="lazy" alt="Fachada da Sul Odonto, prédio branco com a placa da clínica"></div>
+        <div class="mini">
+          <img src="fotos/consultorio.jpg" width="1200" height="900" loading="lazy" alt="Cadeira odontológica azul em um dos consultórios">
+          <a href="https://www.instagram.com/sulodontors/" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#17305C" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="#17305C" stroke="none"/></svg>@sulodontors<small>Casos e novidades no Instagram</small></a>
+        </div>
+        <iframe class="mapa" title="Mapa com a localização da Sul Odonto" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Sul%20Odonto%2C%20R.%20Otaviano%20Silveira%2C%20115%2C%20Sapucaia%20do%20Sul&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="rodape">
+  <div class="wrap">
+    <span class="marca"><img class="logo" src="fotos/logo.png" alt="" width="640" height="641"><span class="txt"><strong>Sul Odonto</strong><small>DENTISTA</small></span></span>
+    <p>R. Otaviano Silveira, 115, Centro, Sapucaia do Sul, RS<br>Responsável técnica: Suzana Aparecida S. Suarez, CRO-RS 10704</p>
+    <p class="credito">Modelo de demonstração feito por Thales dos Santos Leal.<br>Quer um site assim? <a href="https://wa.me/5551986460227" target="_blank" rel="noopener">WhatsApp (51) 98646-0227</a></p>
+  </div>
+</footer>
+
+<a class="flutua" href="https://wa.me/5551991465694?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Sul%20Odonto%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" aria-label="Agendar pelo WhatsApp"><svg aria-hidden="true"><use href="#zap"/></svg></a>
+
+<script>
+(function(){
+  var NUM = '5551991465694';
+  var escolhidos = [];
+  var botoes = document.querySelectorAll('.trat');
+  var explica = document.getElementById('explica');
+  var dor = document.getElementById('dor');
+  var nome = document.getElementById('nome');
+  var enviar = document.getElementById('enviar');
+  var cTrat = document.getElementById('c-trat');
+  var cPer = document.getElementById('c-per');
+  var cNome = document.getElementById('c-nome');
+  var lUrg = document.getElementById('l-urg');
+
+  function periodo(){
+    var p = document.querySelector('input[name=periodo]:checked');
+    return p ? p.value : '';
+  }
+
+  function montar(){
+    var l = ['Olá! Vim pelo site da Sul Odonto e gostaria de agendar uma avaliação.'];
+    l.push('Tratamento: ' + (escolhidos.length ? escolhidos.join(', ') : 'ainda não sei, quero uma avaliação'));
+    if (dor.checked) l.push('É urgente: estou com dor.');
+    l.push('Melhor horário: ' + (periodo() || 'qualquer horário'));
+    var n = nome.value.trim();
+    if (n) l.push('Meu nome: ' + n);
+    return l.join('\n');
+  }
+
+  function escrever(el, txt, vazioTxt){
+    var novo = txt || vazioTxt;
+    if (el.textContent === novo) return;
+    el.textContent = novo;
+    el.classList.toggle('vazio', !txt);
+    el.classList.remove('escreve'); void el.offsetWidth; el.classList.add('escreve');
+  }
+
+  function atualizar(){
+    escrever(cTrat, escolhidos.join(', '), 'avaliação');
+    escrever(cPer, periodo(), 'qualquer um');
+    escrever(cNome, nome.value.trim(), '...');
+    lUrg.hidden = !dor.checked;
+    enviar.href = 'https://wa.me/' + NUM + '?text=' + encodeURIComponent(montar());
+  }
+
+  botoes.forEach(function(b){
+    b.addEventListener('click', function(){
+      var t = b.dataset.t;
+      var ativo = b.getAttribute('aria-pressed') === 'true';
+      b.setAttribute('aria-pressed', ativo ? 'false' : 'true');
+      if (ativo) { escolhidos = escolhidos.filter(function(x){ return x !== t; }); }
+      else { escolhidos.push(t); explica.innerHTML = '<b>' + b.textContent.trim() + ':</b> ' + b.dataset.d; }
+      if (!escolhidos.length) explica.textContent = 'Não sabe qual é o seu caso? Tudo bem: sem escolher nada, a mensagem pede uma avaliação.';
+      atualizar();
+    });
+  });
+  dor.addEventListener('change', atualizar);
+  document.querySelectorAll('input[name=periodo]').forEach(function(r){ r.addEventListener('change', atualizar); });
+  nome.addEventListener('input', atualizar);
+  atualizar();
+
+  /* ===== animações ===== */
+  var anima = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (anima) document.documentElement.classList.add('js-anima');
+
+  function contar(el){
+    var alvo = parseFloat(el.dataset.conta), dec = +(el.dataset.dec || 0), t0 = null, dur = 1400;
+    function passo(t){
+      if (!t0) t0 = t;
+      var p = Math.min(1, (t - t0) / dur); p = 1 - Math.pow(1 - p, 3);
+      el.textContent = (alvo * p).toFixed(dec).replace('.', ',');
+      if (p < 1) requestAnimationFrame(passo);
+    }
+    requestAnimationFrame(passo);
+  }
+
+  // mascote mexe ao tocar
+  var mascote = document.getElementById('mascote');
+  mascote.addEventListener('click', function(){
+    mascote.classList.remove('mexe'); void mascote.offsetWidth; mascote.classList.add('mexe');
+  });
+  mascote.addEventListener('animationend', function(e){ if (e.animationName === 'mexe') mascote.classList.remove('mexe'); });
+
+  // faíscas e "pop" ao escolher tratamento
+  botoes.forEach(function(b, i){
+    b.style.setProperty('--i', i);
+    b.addEventListener('click', function(){
+      if (!anima) return;
+      b.classList.remove('pop'); void b.offsetWidth; b.classList.add('pop');
+      if (b.getAttribute('aria-pressed') !== 'true') return;
+      for (var k = 0; k < 7; k++) {
+        var f = document.createElement('i');
+        var ang = Math.random() * Math.PI * 2, d = 26 + Math.random() * 28;
+        f.className = 'faisca faisca-forma';
+        f.style.setProperty('--x', (b.offsetWidth * (.15 + Math.random() * .7)) + 'px');
+        f.style.setProperty('--y', (b.offsetHeight / 2) + 'px');
+        f.style.setProperty('--dx', (Math.cos(ang) * d) + 'px');
+        f.style.setProperty('--dy', (Math.sin(ang) * d) + 'px');
+        b.appendChild(f);
+        setTimeout(function(x){ return function(){ x.remove(); }; }(f), 800);
+      }
+    });
+  });
+
+  // carimbo quando tem tratamento + horário
+  var cartao = document.querySelector('.cartao');
+  var carimbo = document.getElementById('carimbo');
+  function carimbar(){
+    var pronto = escolhidos.length > 0 && !!periodo();
+    if (pronto && !carimbo.classList.contains('on')) {
+      carimbo.classList.add('on');
+      cartao.classList.add('treme');
+      setTimeout(function(){ cartao.classList.remove('treme'); }, 400);
+    } else if (!pronto) { carimbo.classList.remove('on'); }
+    cartao.classList.toggle('pronto', pronto);
+  }
+  botoes.forEach(function(b){ b.addEventListener('click', carimbar); });
+  document.querySelectorAll('input[name=periodo]').forEach(function(r){ r.addEventListener('change', carimbar); });
+
+  // comparador antes e depois
+  var comp = document.getElementById('comparador');
+  var faixa = comp.querySelector('input');
+  var mexido = false;
+  function pos(v){ comp.style.setProperty('--pos', v + '%'); faixa.value = v; }
+  faixa.addEventListener('input', function(){ mexido = true; pos(faixa.value); });
+  function varrer(){
+    if (!anima || mexido) return;
+    var pts = [50, 84, 16, 50], dur = 2800, t0 = null;
+    function passo(t){
+      if (mexido) return;
+      if (!t0) t0 = t;
+      var p = Math.min(1, (t - t0) / dur), seg = p * 3, i = Math.min(2, Math.floor(seg)), q = seg - i;
+      q = q < .5 ? 2 * q * q : 1 - Math.pow(-2 * q + 2, 2) / 2;
+      pos(Math.round((pts[i] + (pts[i + 1] - pts[i]) * q) * 10) / 10);
+      if (p < 1) requestAnimationFrame(passo);
+    }
+    setTimeout(function(){ requestAnimationFrame(passo); }, 400);
+  }
+
+  // surgir ao rolar
+  [['.secao h2',''],['.secao .intro',''],['.vidro',''],['.cartao',''],['.proteses ul',''],
+   ['.fotos-pro .alta','clip'],['.fotos-pro .pilha img','clip'],['.cartaz',''],['.depo li','esq'],
+   ['.dados',''],['.fachada','clip'],['.mini',''],['.mapa','']].forEach(function(par){
+    document.querySelectorAll(par[0]).forEach(function(el, i){
+      el.setAttribute('data-rev', par[1]);
+      el.style.transitionDelay = ((i % 3) * 110) + 'ms';
+    });
+  });
+  if ('IntersectionObserver' in window && anima) {
+    // elementos com "cortina" (clip-path fechado) não são detectados pelo observer,
+    // então observamos o elemento pai e revelamos os filhos registrados nele
+    var alvos = new Map();
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if (!e.isIntersecting) return;
+        (alvos.get(e.target) || []).forEach(function(el){
+          el.classList.add('visto');
+          if (el.id === 'antes-depois') varrer();
+          if (el.hasAttribute('data-ver')) contar(el);
+        });
+        io.unobserve(e.target);
+      });
+    }, { threshold: .12, rootMargin: '0px 0px -6% 0px' });
+    document.querySelectorAll('[data-rev], .trats, [data-ver]').forEach(function(el){
+      var alvo = el.getAttribute('data-rev') === 'clip' ? el.parentElement : el;
+      if (!alvos.has(alvo)) { alvos.set(alvo, []); io.observe(alvo); }
+      alvos.get(alvo).push(el);
+    });
+    setTimeout(function(){
+      document.querySelectorAll('[data-conta]:not([data-ver])').forEach(contar);
+    }, 950);
+  } else {
+    document.querySelectorAll('[data-rev], .trats').forEach(function(el){ el.classList.add('visto'); });
+  }
+
+  var hoje = new Date().getDay();
+  document.querySelectorAll('#horas tr').forEach(function(tr){
+    if (tr.dataset.d.split(',').indexOf(String(hoje)) > -1) tr.classList.add('hoje');
+  });
+})();
+</script>
+</body>
+</html>
