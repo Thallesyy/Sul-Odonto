@@ -4,26 +4,25 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sul Odonto | Dentista no Centro de Sapucaia do Sul</title>
-<meta name="description" content="Clínica odontológica na R. Otaviano Silveira, 115, Centro de Sapucaia do Sul. Limpeza, restaurações, canal, implantes, próteses e ortodontia. Agende pelo WhatsApp.">
-<meta name="robots" content="noindex">
+<meta name="description" content="Há 22 anos em Sapucaia do Sul. Clínica odontológica na R. Otaviano Silveira, 115, Centro. Limpeza, restaurações, canal, implantes, próteses e ortodontia. Agende pelo WhatsApp.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Sul Odonto | Dentista no Centro de Sapucaia do Sul">
-<meta property="og:description" content="Modelo de site para a Sul Odonto: tratamentos, avaliações e agendamento direto pelo WhatsApp.">
+<meta property="og:description" content="Clínica odontológica no Centro de Sapucaia do Sul. Tratamentos, avaliações e agendamento direto pelo WhatsApp.">
 <meta property="og:image" content="https://thallesyy.github.io/Sul-Odonto/fotos/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta name="theme-color" content="#17305C">
+<meta name="theme-color" content="#0057C8">
 <link rel="icon" type="image/png" href="fotos/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --marinho:#17305C;
-  --marinho-2:#0F2247;
-  --celeste:#3B8BD4;
-  --celeste-claro:#E4F0FB;
-  --amarelo:#F6D34A;
+  --marinho:#0B2353;
+  --marinho-2:#061638;
+  --celeste:#0057C8;
+  --celeste-claro:#E3F0FC;
+  --ceu:#2FA8E0;
   --papel:#F3F7FB;
   --texto:#22324D;
   --suave:#56677F;
@@ -43,12 +42,9 @@ h2{font-size:clamp(1.65rem,4.4vw,2.5rem);font-weight:800}
 h3{font-size:1.2rem;font-weight:700}
 p{margin:0}
 .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-:focus-visible{outline:3px solid var(--amarelo);outline-offset:3px;border-radius:6px}
+:focus-visible{outline:3px solid var(--ceu);outline-offset:3px;border-radius:6px}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
-/* demo */
-.demo{background:var(--marinho-2);color:#C9D7EA;font-size:.85rem;text-align:center;padding:9px 16px;line-height:1.4}
-.demo b{color:#fff;font-weight:700}
 
 /* topo */
 .topo{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--linha)}
@@ -123,7 +119,7 @@ section{scroll-margin-top:80px}
 .trat:hover{background:#2F7BC2}
 .trat .ck{width:18px;height:18px;flex:none;border-radius:50%;box-shadow:inset 0 0 0 2px rgba(255,255,255,.75);display:grid;place-items:center}
 .trat .ck svg{width:12px;height:12px;opacity:0}
-.trat[aria-pressed="true"]{background:var(--amarelo);color:var(--marinho)}
+.trat[aria-pressed="true"]{background:var(--ceu);color:var(--marinho)}
 .trat[aria-pressed="true"] .ck{background:var(--marinho);box-shadow:none}
 .trat[aria-pressed="true"] .ck svg{opacity:1}
 .explica{margin-top:14px;min-height:3.2em;font-size:.95rem;color:var(--suave);border-left:3px solid var(--celeste);padding:2px 0 2px 12px}
@@ -141,7 +137,7 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
 .periodos input{position:absolute;opacity:0;pointer-events:none}
 .periodos span{display:block;text-align:center;padding:12px 10px;border-radius:10px;font-weight:600;background:var(--papel);box-shadow:inset 0 0 0 2px var(--linha);cursor:pointer}
 .periodos input:checked+span{background:var(--marinho);color:#fff;box-shadow:none}
-.periodos input:focus-visible+span{outline:3px solid var(--amarelo);outline-offset:2px}
+.periodos input:focus-visible+span{outline:3px solid var(--ceu);outline-offset:2px}
 .campo input[type=text]{width:100%;font:500 1rem Figtree,sans-serif;padding:14px;border-radius:10px;border:2px solid var(--linha);background:#fff;color:var(--texto)}
 .campo input[type=text]:focus{border-color:var(--celeste);outline:none}
 
@@ -187,18 +183,27 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
 .caso p{color:var(--texto)}
 .caso small{display:block;margin-top:10px;color:var(--suave);font-size:.85rem}
 
+/* galeria de resultados */
+.resultados{margin-top:40px}
+.res-topo{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px 20px}
+.res-topo a{color:var(--celeste);font-weight:700;text-underline-offset:4px}
+.res-grade{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+@media(min-width:760px){.res-grade{grid-template-columns:repeat(3,1fr);gap:16px}}
+.res-grade img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:14px;box-shadow:0 0 0 1px var(--linha)}
+.resultados small{display:block;margin-top:12px;color:var(--suave);font-size:.85rem}
+
 /* avaliações */
-.aval-bg{background:var(--marinho);color:#DCE6F4}
+.aval-bg{background:var(--celeste);color:#EAF2FD}
 .aval-bg h2{color:#fff}
-.aval-bg .intro{color:#B9CBE4}
+.aval-bg .intro{color:#E3EEFB}
 .aval-topo{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:flex-end;justify-content:space-between}
 .aval-topo a{color:#fff;font-weight:700;text-underline-offset:4px}
 .depo{margin:36px 0 0;padding:0;list-style:none;columns:1;column-gap:28px}
 @media(min-width:760px){.depo{columns:2}}
 @media(min-width:1040px){.depo{columns:3}}
-.depo li{break-inside:avoid;margin:0 0 28px;padding-left:18px;border-left:3px solid var(--amarelo)}
+.depo li{break-inside:avoid;margin:0 0 28px;padding-left:18px;border-left:3px solid var(--ceu)}
 .depo q{display:block;font-size:1.08rem;line-height:1.55;color:#fff;quotes:"“" "”"}
-.depo cite{display:block;margin-top:8px;font-style:normal;font-size:.88rem;color:#9FB4D3}
+.depo cite{display:block;margin-top:8px;font-style:normal;font-size:.88rem;color:#D3E3F8}
 
 /* visite */
 .visite{display:grid;gap:32px}
@@ -237,13 +242,13 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
 /* ===== animações ===== */
 .nw{white-space:nowrap}
 .w{display:inline-block}
-.faisca-forma{clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);background:var(--amarelo)}
+.faisca-forma{clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);background:var(--ceu)}
 
 /* mascote sobre a foto */
 .hero-visual{position:relative}
 .hero-visual::before{content:"";position:absolute;inset:18px -10px -14px 22px;background:var(--celeste-claro);border-radius:26px;transform:rotate(3deg);z-index:-1}
-.mascote{position:absolute;top:-34px;left:-4px;width:108px;height:108px;border-radius:50%;background:#fff;box-shadow:0 0 0 4px var(--marinho),0 14px 30px -10px rgba(15,34,71,.5);display:grid;place-items:center;z-index:2;cursor:pointer}
-.mascote img{width:88%;height:88%;border-radius:50%}
+.mascote{position:absolute;top:-34px;left:-4px;width:108px;height:108px;border-radius:50%;background:#fff;box-shadow:0 0 0 4px var(--celeste),0 14px 30px -10px rgba(6,22,56,.5);display:grid;place-items:center;z-index:2;cursor:pointer}
+.mascote img{width:100%;height:100%;border-radius:50%;object-fit:cover}
 .mascote .bl{position:absolute;width:20px;height:20px}
 .mascote .bl:nth-of-type(1){top:-10px;left:-6px}
 .mascote .bl:nth-of-type(2){top:18px;right:-18px;width:14px;height:14px}
@@ -252,7 +257,7 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
 @media(max-width:899px){.hero-foto figcaption{left:auto;right:14px}.hero .wrap{gap:58px}}
 
 /* faixa de tratamentos */
-.fita{background:var(--marinho);overflow:hidden;padding:15px 0;border-top:4px solid var(--amarelo)}
+.fita{background:var(--celeste);overflow:hidden;padding:15px 0;border-top:4px solid var(--ceu)}
 .fita-trilho{display:flex;align-items:center;gap:22px;width:max-content;padding-left:22px}
 .fita span{color:#fff;font-weight:800;font-size:1.15rem;white-space:nowrap;letter-spacing:-.01em}
 .fita i{width:16px;height:16px;flex:none}
@@ -263,7 +268,7 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
 .faisca:nth-of-type(odd){background:var(--celeste);width:11px;height:11px}
 
 /* carimbo do cartão */
-.carimbo{position:absolute;right:16px;bottom:120px;padding:8px 12px;border:3px double #2D5FA8;color:#2D5FA8;border-radius:8px;font:800 .78rem/1.15 Figtree,sans-serif;letter-spacing:.08em;text-align:center;transform:rotate(-12deg);opacity:0;pointer-events:none;background:rgba(255,253,246,.6)}
+.carimbo{position:absolute;right:16px;bottom:120px;padding:8px 12px;border:3px double #0057C8;color:#0057C8;border-radius:8px;font:800 .78rem/1.15 Figtree,sans-serif;letter-spacing:.08em;text-align:center;transform:rotate(-12deg);opacity:0;pointer-events:none;background:rgba(255,253,246,.6)}
 .carimbo.on{opacity:.9}
 
 /* comparador antes e depois */
@@ -273,12 +278,12 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
 .comparador .depois{background-position:50% 100%;clip-path:inset(0 0 0 var(--pos))}
 .comparador .tag{position:absolute;top:10px;font-size:.78rem;font-weight:800;padding:5px 10px;border-radius:6px;z-index:2}
 .comparador .t-antes{left:10px;background:rgba(15,34,71,.82);color:#fff}
-.comparador .t-depois{right:10px;background:var(--amarelo);color:var(--marinho)}
+.comparador .t-depois{right:10px;background:var(--ceu);color:var(--marinho)}
 .comparador .alca{position:absolute;top:0;bottom:0;left:var(--pos);width:3px;margin-left:-1.5px;background:#fff;z-index:2;box-shadow:0 0 0 1px rgba(15,34,71,.25)}
 .comparador .alca span{position:absolute;top:50%;left:50%;width:42px;height:42px;margin:-21px 0 0 -21px;border-radius:50%;background:#fff;box-shadow:0 4px 14px rgba(15,34,71,.35);display:grid;place-items:center}
 .comparador .alca span::before{content:"‹ ›";font:800 20px/1 Figtree,sans-serif;color:var(--marinho);margin-top:-2px}
 .comparador input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0;z-index:3}
-.comparador:focus-within{outline:3px solid var(--amarelo);outline-offset:3px}
+.comparador:focus-within{outline:3px solid var(--ceu);outline-offset:3px}
 @media(min-width:760px){.caso{grid-template-columns:440px 1fr}}
 
 @media (prefers-reduced-motion:no-preference){
@@ -336,10 +341,9 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
   <symbol id="estrela" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></symbol>
   <symbol id="check" viewBox="0 0 24 24"><path fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
   <symbol id="pino" viewBox="0 0 24 24"><path fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke-width="2"/></symbol>
-  <symbol id="ok" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#E4F0FB"/><path fill="none" stroke="#3B8BD4" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M7.5 12.5l3 3 6-6.5"/></symbol>
+  <symbol id="ok" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#E3F0FC"/><path fill="none" stroke="#0057C8" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M7.5 12.5l3 3 6-6.5"/></symbol>
 </svg>
 
-<div class="demo"><b>Modelo de demonstração</b> feito por Thales dos Santos Leal para a Sul Odonto.</div>
 
 <header class="topo">
   <div class="wrap">
@@ -360,7 +364,7 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
   <div class="wrap">
     <div>
       <h1 class="anima-h1"><span class="w" style="--i:0">Dentista</span> <span class="w" style="--i:1">no</span> <span class="w" style="--i:2">Centro</span> <span class="w" style="--i:3">de</span> <span class="w" style="--i:4">Sapucaia,</span> <span class="w" style="--i:5">do</span> <span class="w nw" style="--i:6">check-up</span> <span class="w" style="--i:7">à</span> <span class="w" style="--i:8">prótese.</span></h1>
-      <p class="sub entra" style="--d:.7s">Limpeza, restaurações, canal, implantes, próteses e aparelho no mesmo endereço. Agende sua avaliação direto pelo WhatsApp.</p>
+      <p class="sub entra" style="--d:.7s">Há 22 anos cuidando de sorrisos em Sapucaia do Sul. Limpeza, restaurações, canal, implantes, próteses e aparelho. Agende sua avaliação direto pelo WhatsApp.</p>
       <div class="nota entra" style="--d:.85s">
         <span class="estrelas" aria-hidden="true"><svg style="--i:0"><use href="#estrela"/></svg><svg style="--i:1"><use href="#estrela"/></svg><svg style="--i:2"><use href="#estrela"/></svg><svg style="--i:3"><use href="#estrela"/></svg><svg style="--i:4"><use href="#estrela"/></svg></span>
         <span><b>4,9 no Google</b>, com <span data-conta="62">62</span> avaliações</span>
@@ -377,7 +381,7 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
         <figcaption>Nossa recepção</figcaption>
       </figure>
       <div class="mascote" id="mascote" aria-hidden="true">
-        <img src="fotos/logo.png" alt="" width="640" height="641">
+        <img src="fotos/mascote.jpg" alt="" width="400" height="400">
         <i class="bl faisca-forma"></i><i class="bl faisca-forma"></i><i class="bl faisca-forma"></i>
       </div>
     </div>
@@ -493,6 +497,22 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
       </div>
     </div>
     <!-- FIM DO BLOCO ANTES E DEPOIS -->
+
+    <div class="resultados" id="resultados">
+      <div class="res-topo">
+        <h3>Mais resultados da clínica</h3>
+        <a href="https://www.instagram.com/sulodontors/" target="_blank" rel="noopener">Ver mais no Instagram</a>
+      </div>
+      <ul class="res-grade">
+        <li><img src="fotos/resultado-1.jpg" width="900" height="900" loading="lazy" alt="Antes e depois de um caso da Sul Odonto"></li>
+        <li><img src="fotos/resultado-2.jpg" width="900" height="900" loading="lazy" alt="Antes e depois de um caso da Sul Odonto"></li>
+        <li><img src="fotos/resultado-3.jpg" width="900" height="900" loading="lazy" alt="Antes e depois de um caso da Sul Odonto"></li>
+        <li><img src="fotos/resultado-4.jpg" width="900" height="900" loading="lazy" alt="Antes e depois de um caso da Sul Odonto"></li>
+        <li><img src="fotos/resultado-5.jpg" width="900" height="900" loading="lazy" alt="Antes e depois de um caso da Sul Odonto"></li>
+        <li><img src="fotos/resultado-6.jpg" width="900" height="900" loading="lazy" alt="Antes e depois de um caso da Sul Odonto"></li>
+      </ul>
+      <small>Casos publicados pela Sul Odonto no Instagram, sempre com o antes e o depois do mesmo paciente.</small>
+    </div>
   </div>
 </section>
 
@@ -539,7 +559,7 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
               <tr data-d="0"><td>Domingo</td><td>Fechado</td></tr>
             </table>
           </div>
-          <div><span class="selo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#17305C" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="4.5" r="1.8"/><path d="M12 7v6h5l2 5"/><path d="M8.5 10.5a5.5 5.5 0 1 0 6.6 8.3"/></svg>Entrada acessível para cadeira de rodas</span></div>
+          <div><span class="selo"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#0057C8" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="4.5" r="1.8"/><path d="M12 7v6h5l2 5"/><path d="M8.5 10.5a5.5 5.5 0 1 0 6.6 8.3"/></svg>Entrada acessível para cadeira de rodas</span></div>
           <div class="acoes">
             <a class="btn btn-zap zap-geral" href="https://wa.me/5551991465694?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Sul%20Odonto%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#zap"/></svg>(51) 99146-5694</a>
             <a class="btn btn-linha" href="https://www.google.com/maps/dir/?api=1&amp;destination=Sul+Odonto+R.+Otaviano+Silveira+115+Sapucaia+do+Sul" target="_blank" rel="noopener">Como chegar</a>
@@ -550,7 +570,7 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
         <div class="fachada"><img src="fotos/fachada.jpg" width="1195" height="896" loading="lazy" alt="Fachada da Sul Odonto, prédio branco com a placa da clínica"></div>
         <div class="mini">
           <img src="fotos/consultorio.jpg" width="1200" height="900" loading="lazy" alt="Cadeira odontológica azul em um dos consultórios">
-          <a href="https://www.instagram.com/sulodontors/" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#17305C" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="#17305C" stroke="none"/></svg>@sulodontors<small>Casos e novidades no Instagram</small></a>
+          <a href="https://www.instagram.com/sulodontors/" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#0057C8" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="#17305C" stroke="none"/></svg>@sulodontors<small>Casos e novidades no Instagram</small></a>
         </div>
         <iframe class="mapa" title="Mapa com a localização da Sul Odonto" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Sul%20Odonto%2C%20R.%20Otaviano%20Silveira%2C%20115%2C%20Sapucaia%20do%20Sul&amp;output=embed"></iframe>
       </div>
@@ -564,7 +584,7 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
   <div class="wrap">
     <span class="marca"><img class="logo" src="fotos/logo.png" alt="" width="640" height="641"><span class="txt"><strong>Sul Odonto</strong><small>DENTISTA</small></span></span>
     <p>R. Otaviano Silveira, 115, Centro, Sapucaia do Sul, RS<br>Responsável técnica: Suzana Aparecida S. Suarez, CRO-RS 10704</p>
-    <p class="credito">Modelo de demonstração feito por Thales dos Santos Leal.<br>Quer um site assim? <a href="https://wa.me/5551986460227" target="_blank" rel="noopener">WhatsApp (51) 98646-0227</a></p>
+    <p class="credito">Site feito por <a href="https://wa.me/5551986460227" target="_blank" rel="noopener">Thales dos Santos Leal</a></p>
   </div>
 </footer>
 
