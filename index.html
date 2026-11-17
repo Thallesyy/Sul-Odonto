@@ -209,7 +209,7 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
 .res-abre .ad{aspect-ratio:1/1;box-shadow:0 0 0 1px var(--linha);transition:transform .25s,box-shadow .25s}
 /* caso ampliado */
 .zoom{border:0;padding:0;background:transparent;width:min(92vw,760px);max-width:none;overflow:visible}
-.zoom::backdrop{background:rgba(6,22,56,.88)}
+.zoom::backdrop{background:rgba(6,22,56,.94);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
 .zoom .ad-grande{width:min(100%,calc(70vh * var(--r,1)));aspect-ratio:var(--r,1);margin:0 auto;border-radius:16px;touch-action:pan-y pinch-zoom}
 .ad-grande .tag{top:12px;font-size:.82rem;padding:6px 10px}
 .ad-grande .t-antes{left:12px}
