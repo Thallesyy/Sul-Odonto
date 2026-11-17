@@ -894,7 +894,10 @@ html:has(.zoom[open]){overflow:hidden}
       atual = (i + fotos.length) % fotos.length;
       var b = fotos[atual], meu = ++pedido;
       grande.zerar();
-      zAd.style.setProperty('--r', b.dataset.r);
+      // no celular, os casos largos ficam mais quadrados para os dentes aparecerem maiores
+      var r = parseFloat(b.dataset.r);
+      if (window.matchMedia('(max-width: 640px)').matches) r = Math.min(r, 1.05);
+      zAd.style.setProperty('--r', r);
       zAntes.src = b.dataset.a;
       zDepois.src = b.dataset.d;
       zAntes.alt = 'Antes do tratamento, caso ' + (atual + 1);
