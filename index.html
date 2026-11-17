@@ -8,11 +8,16 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Sul Odonto | Dentista no Centro de Sapucaia do Sul">
 <meta property="og:description" content="Clínica odontológica no Centro de Sapucaia do Sul. Tratamentos, avaliações e agendamento direto pelo WhatsApp.">
-<meta property="og:image" content="https://thallesyy.github.io/Sul-Odonto/fotos/og.jpg">
+<meta property="og:image" content="https://thallesyy.github.io/Sul-Odonto/fotos/compartilhar.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0057C8">
-<link rel="icon" type="image/png" href="fotos/logo.png">
+<link rel="icon" type="image/png" sizes="32x32" href="fotos/icone-32.png">
+<link rel="apple-touch-icon" href="fotos/icone-180.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Dentist","name":"Sul Odonto","description":"Clínica odontológica há 22 anos em Sapucaia do Sul.","telephone":"+55 51 99146-5694","address":{"@type":"PostalAddress","streetAddress":"R. Otaviano Silveira, 115, Centro","addressLocality":"Sapucaia do Sul","addressRegion":"RS","postalCode":"93214-500","addressCountry":"BR"},"geo":{"@type":"GeoCoordinates","latitude":-29.8222829,"longitude":-51.1495856},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"19:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"12:00"}],"sameAs":["https://www.instagram.com/sulodontors/"]}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -72,7 +77,7 @@ p{margin:0}
 .menu a.btn-zap{color:#fff;padding:11px 16px;font-size:.95rem;border-radius:10px}
 
 /* hero */
-.hero{padding:36px 0 56px}
+.hero{padding:36px 0 64px;background:linear-gradient(180deg,#fff 0%,#EEF5FD 100%);overflow-x:clip}
 .hero .wrap{display:grid;gap:32px}
 .hero h1{max-width:15ch}
 .hero .sub{margin-top:18px;font-size:1.1rem;color:var(--suave);max-width:46ch}
@@ -86,9 +91,9 @@ p{margin:0}
 .endereco svg{width:18px;height:18px;flex:none;margin-top:3px;stroke:var(--celeste)}
 .hero-foto{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:4/3.4;background:var(--celeste-claro)}
 .hero-foto img{width:100%;height:100%;object-fit:cover;object-position:30% 32%}
-.hero-foto figcaption{position:absolute;left:14px;bottom:14px;background:rgba(15,34,71,.82);color:#fff;font-size:.85rem;font-weight:600;padding:7px 12px;border-radius:8px}
+.hero-foto figcaption{position:absolute;left:14px;bottom:14px;background:rgba(11,35,83,.85);color:#fff;font-size:.85rem;font-weight:600;padding:7px 12px;border-radius:8px}
 @media(min-width:900px){
-  .hero{padding:64px 0 88px}
+  .hero{padding:72px 0 96px}
   .hero .wrap{grid-template-columns:1.05fr .95fr;align-items:center;gap:56px}
   .hero-foto{aspect-ratio:4/4.6}
   .acoes .btn{flex:0 0 auto}
@@ -116,18 +121,18 @@ section{scroll-margin-top:80px}
 .trats{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 @media(min-width:600px){.trats{grid-template-columns:repeat(3,1fr)}}
 .trat{display:flex;align-items:center;gap:8px;background:var(--celeste);color:#fff;border:0;border-radius:7px;padding:12px 12px;min-height:50px;font:700 .95rem/1.2 Figtree,sans-serif;text-align:left;cursor:pointer;transition:background .15s,color .15s}
-.trat:hover{background:#2F7BC2}
+.trat:hover{background:#0049A8}
 .trat .ck{width:18px;height:18px;flex:none;border-radius:50%;box-shadow:inset 0 0 0 2px rgba(255,255,255,.75);display:grid;place-items:center}
 .trat .ck svg{width:12px;height:12px;opacity:0}
-.trat[aria-pressed="true"]{background:var(--ceu);color:var(--marinho)}
-.trat[aria-pressed="true"] .ck{background:var(--marinho);box-shadow:none}
+.trat[aria-pressed="true"]{background:#fff;color:var(--celeste);box-shadow:inset 0 0 0 2px var(--celeste),0 0 0 3px var(--ceu)}
+.trat[aria-pressed="true"] .ck{background:var(--celeste);box-shadow:none}
 .trat[aria-pressed="true"] .ck svg{opacity:1}
 .explica{margin-top:14px;min-height:3.2em;font-size:.95rem;color:var(--suave);border-left:3px solid var(--celeste);padding:2px 0 2px 12px}
 .explica b{color:var(--marinho)}
 .campo{margin-top:22px}
 .campo>span,.campo legend{display:block;font-weight:700;color:var(--marinho);margin-bottom:10px;font-size:1rem;padding:0}
 fieldset{border:0;margin:0;padding:0;min-width:0}
-.dor{display:flex;align-items:center;gap:12px;cursor:pointer;font-weight:600;color:var(--texto);background:#FFF6D6;border-radius:10px;padding:12px 14px}
+.dor{display:flex;align-items:center;gap:12px;cursor:pointer;font-weight:600;color:var(--texto);background:#FDEFEF;border-radius:10px;padding:12px 14px}
 .dor input{appearance:none;width:44px;height:26px;flex:none;border-radius:20px;background:#CFD9E6;position:relative;cursor:pointer;transition:background .15s;margin:0}
 .dor input::after{content:"";position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:#fff;transition:transform .15s}
 .dor input:checked{background:#D9534F}
@@ -189,7 +194,40 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
 .res-topo a{color:var(--celeste);font-weight:700;text-underline-offset:4px}
 .res-grade{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
 @media(min-width:760px){.res-grade{grid-template-columns:repeat(3,1fr);gap:16px}}
-.res-grade img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:14px;box-shadow:0 0 0 1px var(--linha)}
+.res-abre{display:block;width:100%;padding:0;border:0;background:none;border-radius:14px;cursor:zoom-in;font:inherit;color:inherit}
+.res-abre:hover .ad{box-shadow:0 0 0 2px var(--celeste),0 14px 28px -16px rgba(6,22,56,.6)}
+/* antes e depois: miniaturas e caso ampliado */
+.ad{position:relative;display:block;overflow:hidden;border-radius:14px;--pos:50%;background:#E9EEF5;user-select:none;-webkit-user-select:none}
+.ad img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none;-webkit-user-drag:none}
+.ad .ad-depois{clip-path:inset(0 0 0 var(--pos))}
+.ad-linha{position:absolute;top:0;bottom:0;left:var(--pos);width:3px;margin-left:-1.5px;background:#fff;box-shadow:0 0 0 1px rgba(15,34,71,.25);z-index:2}
+.ad-linha span{position:absolute;top:50%;left:50%;width:32px;height:32px;margin:-16px 0 0 -16px;border-radius:50%;background:#fff;box-shadow:0 4px 14px rgba(15,34,71,.35);display:grid;place-items:center}
+.ad-linha span::before{content:"‹ ›";font:800 15px/1 Figtree,sans-serif;color:var(--marinho);margin-top:-2px}
+.ad .tag{position:absolute;top:8px;font-size:.7rem;font-weight:800;line-height:1;padding:5px 8px;border-radius:6px;z-index:2}
+.ad .t-antes{left:8px;background:rgba(15,34,71,.82);color:#fff}
+.ad .t-depois{right:8px;background:var(--ceu);color:var(--marinho)}
+.res-abre .ad{aspect-ratio:1/1;box-shadow:0 0 0 1px var(--linha);transition:transform .25s,box-shadow .25s}
+/* caso ampliado */
+.zoom{border:0;padding:0;background:transparent;width:min(92vw,760px);max-width:none;overflow:visible}
+.zoom::backdrop{background:rgba(6,22,56,.88)}
+.zoom .ad-grande{width:min(100%,calc(70vh * var(--r,1)));aspect-ratio:var(--r,1);margin:0 auto;border-radius:16px;touch-action:pan-y pinch-zoom}
+.ad-grande .tag{top:12px;font-size:.82rem;padding:6px 10px}
+.ad-grande .t-antes{left:12px}
+.ad-grande .t-depois{right:12px}
+.ad-grande .ad-linha span{width:46px;height:46px;margin:-23px 0 0 -23px}
+.ad-grande .ad-linha span::before{font-size:21px}
+.ad-grande input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0;z-index:3}
+.ad-grande:has(input:focus-visible){outline:3px solid var(--ceu);outline-offset:3px}
+.zoom-rodape{color:#fff;text-align:center;margin:14px 56px 0;font-weight:700;font-size:1rem;line-height:1.3}
+.zoom-rodape small{display:block;font-weight:500;color:#C9D7EA;font-size:.85rem;margin-top:3px}
+.zoom .z-bt{position:absolute;width:48px;height:48px;border-radius:50%;border:0;background:#fff;color:var(--marinho);display:grid;place-items:center;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.35);z-index:4}
+.zoom .z-bt svg{width:22px;height:22px}
+.zoom .z-fecha{top:-58px;right:0}
+.zoom .z-ant,.zoom .z-prox{bottom:-4px}
+.zoom .z-ant{left:0}
+.zoom .z-prox{right:0}
+@media(min-width:1000px){.zoom .z-ant,.zoom .z-prox{bottom:auto;top:calc(50% - 50px)}.zoom .z-ant{left:-68px}.zoom .z-prox{right:-68px}}
+html:has(.zoom[open]){overflow:hidden}
 .resultados small{display:block;margin-top:12px;color:var(--suave);font-size:.85rem}
 
 /* avaliações */
@@ -198,12 +236,34 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
 .aval-bg .intro{color:#E3EEFB}
 .aval-topo{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:flex-end;justify-content:space-between}
 .aval-topo a{color:#fff;font-weight:700;text-underline-offset:4px}
+.aval-bg .estrelas{margin-bottom:14px}
+.aval-bg .estrelas svg{width:26px;height:26px}
 .depo{margin:36px 0 0;padding:0;list-style:none;columns:1;column-gap:28px}
 @media(min-width:760px){.depo{columns:2}}
 @media(min-width:1040px){.depo{columns:3}}
 .depo li{break-inside:avoid;margin:0 0 28px;padding-left:18px;border-left:3px solid var(--ceu)}
 .depo q{display:block;font-size:1.08rem;line-height:1.55;color:#fff;quotes:"“" "”"}
 .depo cite{display:block;margin-top:8px;font-style:normal;font-size:.88rem;color:#D3E3F8}
+
+/* perguntas frequentes */
+.duvidas{display:grid;gap:32px}
+@media(min-width:900px){.duvidas{grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}.duv-cab{position:sticky;top:100px}}
+.duv-zap{margin-top:28px;display:grid;grid-template-columns:76px 1fr;gap:16px;align-items:center;background:var(--celeste-claro);border-radius:20px;padding:18px}
+.duv-masc{width:76px;height:76px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 3px var(--celeste)}
+.duv-zap p{font-weight:700;color:var(--marinho);line-height:1.35}
+.duv-zap .btn{grid-column:1/-1}
+.faq{border-top:2px solid var(--marinho)}
+.faq details{border-bottom:1px solid var(--linha)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 2px;font-weight:700;font-size:1.08rem;line-height:1.35;color:var(--marinho)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:hover{color:var(--celeste)}
+.faq .mais{position:relative;flex:none;width:30px;height:30px;border-radius:50%;background:var(--celeste-claro);transition:transform .25s,background .2s}
+.faq .mais::before,.faq .mais::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:2.5px;border-radius:2px;background:var(--celeste);transform:translate(-50%,-50%)}
+.faq .mais::after{transform:translate(-50%,-50%) rotate(90deg)}
+.faq details[open] .mais{transform:rotate(45deg);background:var(--celeste)}
+.faq details[open] .mais::before,.faq details[open] .mais::after{background:#fff}
+.faq details p{padding:0 2px 20px;color:var(--suave);max-width:60ch}
+.faq details a{color:var(--celeste);font-weight:600}
 
 /* visite */
 .visite{display:grid;gap:32px}
@@ -234,6 +294,8 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
 .rodape .marca .logo{mix-blend-mode:normal;background:#fff;border-radius:12px;margin:0 6px 0 0;padding:2px}
 .rodape a{color:#fff}
 .credito{border-top:1px solid rgba(255,255,255,.12);padding-top:18px}
+.rodape-links{display:flex;flex-wrap:wrap;gap:8px 24px}
+.rodape-links a{font-weight:600;text-underline-offset:4px}
 
 /* botão flutuante */
 .flutua{position:fixed;right:16px;bottom:16px;z-index:30;width:60px;height:60px;border-radius:50%;background:var(--zap);display:grid;place-items:center;box-shadow:0 10px 24px -8px rgba(0,0,0,.45)}
@@ -245,16 +307,20 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
 .faisca-forma{clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);background:var(--ceu)}
 
 /* mascote sobre a foto */
-.hero-visual{position:relative}
-.hero-visual::before{content:"";position:absolute;inset:18px -10px -14px 22px;background:var(--celeste-claro);border-radius:26px;transform:rotate(3deg);z-index:-1}
-.mascote{position:absolute;top:-34px;left:-4px;width:108px;height:108px;border-radius:50%;background:#fff;box-shadow:0 0 0 4px var(--celeste),0 14px 30px -10px rgba(6,22,56,.5);display:grid;place-items:center;z-index:2;cursor:pointer}
-.mascote img{width:100%;height:100%;border-radius:50%;object-fit:cover}
+.hero-visual{position:relative;isolation:isolate}
+.hero-visual::before{content:"";position:absolute;inset:22px -12px -16px 26px;background:linear-gradient(150deg,var(--celeste) 0%,var(--ceu) 100%);border-radius:28px 96px 28px 72px;transform:rotate(2.5deg);z-index:-1}
+/* selo dos 22 anos com o mascote */
+.mascote{position:absolute;top:-56px;left:-8px;width:144px;height:144px;border-radius:50%;background:#fff;box-shadow:0 0 0 4px var(--celeste),0 16px 32px -12px rgba(6,22,56,.55);z-index:2;cursor:pointer}
+.mascote .anel{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.mascote .anel text{font:800 20px Figtree,sans-serif;fill:var(--celeste);letter-spacing:.04em}
+.mascote img{position:absolute;inset:19%;width:62%;height:62%;border-radius:50%;object-fit:cover;box-shadow:0 0 0 3px var(--celeste-claro)}
 .mascote .bl{position:absolute;width:20px;height:20px}
-.mascote .bl:nth-of-type(1){top:-10px;left:-6px}
-.mascote .bl:nth-of-type(2){top:18px;right:-18px;width:14px;height:14px}
-.mascote .bl:nth-of-type(3){bottom:-6px;left:10px;width:12px;height:12px}
-@media(min-width:900px){.mascote{width:150px;height:150px;top:-44px;left:auto;right:-28px}}
-@media(max-width:899px){.hero-foto figcaption{left:auto;right:14px}.hero .wrap{gap:58px}}
+.mascote .bl:nth-of-type(1){top:-6px;left:2px}
+.mascote .bl:nth-of-type(2){top:24px;right:-14px;width:14px;height:14px}
+.mascote .bl:nth-of-type(3){bottom:0;left:16px;width:12px;height:12px}
+@media(min-width:900px){.mascote{width:192px;height:192px;top:-66px;left:auto;right:-10px}}
+@media(min-width:1200px){.mascote{right:-30px}}
+@media(max-width:899px){.hero-foto figcaption{left:auto;right:14px}.hero .wrap{gap:76px}}
 
 /* faixa de tratamentos */
 .fita{background:var(--celeste);overflow:hidden;padding:15px 0;border-top:4px solid var(--ceu)}
@@ -299,6 +365,8 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
   @keyframes flutua{from{transform:translateY(0) rotate(-3deg)}to{transform:translateY(-8px) rotate(4deg)}}
   .mascote.mexe{animation:mexe .6s ease-in-out}
   @keyframes mexe{0%,100%{transform:rotate(0)}20%{transform:rotate(-14deg) scale(1.06)}45%{transform:rotate(12deg)}70%{transform:rotate(-6deg)}}
+  .mascote .anel{animation:roda 24s linear infinite}
+  @keyframes roda{to{transform:rotate(360deg)}}
   .mascote .bl{animation:pisca 2.2s ease-in-out infinite}
   .mascote .bl:nth-of-type(2){animation-delay:.7s}
   .mascote .bl:nth-of-type(3){animation-delay:1.4s}
@@ -329,6 +397,10 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
   @keyframes treme{30%{transform:translateY(3px)}60%{transform:translateY(-1px)}}
   .cartao.pronto .btn-zap{animation:chama 1.8s ease-out infinite}
   @keyframes chama{0%{box-shadow:0 0 0 0 rgba(31,168,85,.55)}70%,100%{box-shadow:0 0 0 14px rgba(31,168,85,0)}}
+  .zoom[open] .ad-grande{animation:amplia .28s cubic-bezier(.2,.8,.2,1)}
+  @keyframes amplia{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:none}}
+  .res-abre:hover .ad{transform:translateY(-3px)}
+  .faq details[open] p{animation:aparece .35s ease-out}
   .flutua::before{content:"";position:absolute;inset:0;border-radius:50%;background:var(--zap);animation:onda 2.6s ease-out infinite;z-index:-1}
   @keyframes onda{from{transform:scale(1);opacity:.55}to{transform:scale(1.7);opacity:0}}
 }
@@ -352,6 +424,7 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
       <a class="so-desk" href="#tratamentos">Tratamentos</a>
       <a class="so-desk" href="#proteses">Próteses</a>
       <a class="so-desk" href="#avaliacoes">Avaliações</a>
+      <a class="so-desk" href="#duvidas">Dúvidas</a>
       <a class="so-desk" href="#visite">Como chegar</a>
       <a class="btn btn-zap zap-geral" href="https://wa.me/5551991465694?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Sul%20Odonto%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#zap"/></svg>WhatsApp</a>
     </nav>
@@ -381,6 +454,7 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
         <figcaption>Nossa recepção</figcaption>
       </figure>
       <div class="mascote" id="mascote" aria-hidden="true">
+        <svg class="anel" viewBox="0 0 200 200"><defs><path id="volta" d="M100 100m-79 0a79 79 0 1 1 158 0a79 79 0 1 1-158 0"/></defs><text><textPath href="#volta" xlink:href="#volta" textLength="492" lengthAdjust="spacing">HÁ 22 ANOS • EM SAPUCAIA DO SUL •</textPath></text></svg>
         <img src="fotos/mascote.jpg" alt="" width="400" height="400">
         <i class="bl faisca-forma"></i><i class="bl faisca-forma"></i><i class="bl faisca-forma"></i>
       </div>
@@ -473,9 +547,9 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
         <div class="acoes"><a class="btn btn-zap" href="https://wa.me/5551991465694?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Sul%20Odonto%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20pr%C3%B3tese." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#zap"/></svg>Quero avaliar minha prótese</a></div>
       </div>
       <div class="fotos-pro">
-        <img class="alta" src="fotos/protese-superior.jpg" width="1200" height="1600" loading="lazy" alt="Prótese superior pronta, segurada por uma mão de luva">
+        <img class="alta" src="fotos/protese-mao.jpg" width="720" height="960" loading="lazy" decoding="async" alt="Prótese total pronta, segurada por mãos de luva">
         <div class="pilha">
-          <img src="fotos/protese-total.jpg" width="1200" height="1600" loading="lazy" alt="Par de próteses totais, superior e inferior, sobre a bancada">
+          <img src="fotos/protese-par.jpg" width="1000" height="1000" loading="lazy" decoding="async" alt="Duas próteses totais, superior e inferior, sobre a mesa">
           <div class="cartaz">“…cumprimento das datas e qualidade da prótese que adquiri.”<small>Zilma, no Google</small></div>
         </div>
       </div>
@@ -498,21 +572,36 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
     </div>
     <!-- FIM DO BLOCO ANTES E DEPOIS -->
 
+    <!-- BLOCO RESULTADOS: remover se a clínica não tiver autorização dos pacientes -->
     <div class="resultados" id="resultados">
       <div class="res-topo">
         <h3>Mais resultados da clínica</h3>
         <a href="https://www.instagram.com/sulodontors/" target="_blank" rel="noopener">Ver mais no Instagram</a>
       </div>
       <ul class="res-grade">
-        <li><img src="fotos/resultado-1.jpg" width="900" height="900" loading="lazy" alt="Antes e depois de um caso da Sul Odonto"></li>
-        <li><img src="fotos/resultado-2.jpg" width="900" height="900" loading="lazy" alt="Antes e depois de um caso da Sul Odonto"></li>
-        <li><img src="fotos/resultado-3.jpg" width="900" height="900" loading="lazy" alt="Antes e depois de um caso da Sul Odonto"></li>
-        <li><img src="fotos/resultado-4.jpg" width="900" height="900" loading="lazy" alt="Antes e depois de um caso da Sul Odonto"></li>
-        <li><img src="fotos/resultado-5.jpg" width="900" height="900" loading="lazy" alt="Antes e depois de um caso da Sul Odonto"></li>
-        <li><img src="fotos/resultado-6.jpg" width="900" height="900" loading="lazy" alt="Antes e depois de um caso da Sul Odonto"></li>
+        <li><button type="button" class="res-abre" data-r="1.1806" data-a="fotos/caso1-antes.jpg" data-d="fotos/caso1-depois.jpg" aria-label="Ver o caso 1 de 6 ampliado"><span class="ad"><img class="ad-antes" src="fotos/caso1-antes-p.jpg" width="600" height="600" loading="lazy" decoding="async" alt=""><img class="ad-depois" src="fotos/caso1-depois-p.jpg" width="600" height="600" loading="lazy" decoding="async" alt=""><span class="tag t-antes">Antes</span><span class="tag t-depois">Depois</span><span class="ad-linha"><span></span></span></span></button></li>
+        <li><button type="button" class="res-abre" data-r="2.0444" data-a="fotos/caso2-antes.jpg" data-d="fotos/caso2-depois.jpg" aria-label="Ver o caso 2 de 6 ampliado"><span class="ad"><img class="ad-antes" src="fotos/caso2-antes-p.jpg" width="600" height="600" loading="lazy" decoding="async" alt=""><img class="ad-depois" src="fotos/caso2-depois-p.jpg" width="600" height="600" loading="lazy" decoding="async" alt=""><span class="tag t-antes">Antes</span><span class="tag t-depois">Depois</span><span class="ad-linha"><span></span></span></span></button></li>
+        <li><button type="button" class="res-abre" data-r="1.6103" data-a="fotos/caso3-antes.jpg" data-d="fotos/caso3-depois.jpg" aria-label="Ver o caso 3 de 6 ampliado"><span class="ad"><img class="ad-antes" src="fotos/caso3-antes-p.jpg" width="600" height="600" loading="lazy" decoding="async" alt=""><img class="ad-depois" src="fotos/caso3-depois-p.jpg" width="600" height="600" loading="lazy" decoding="async" alt=""><span class="tag t-antes">Antes</span><span class="tag t-depois">Depois</span><span class="ad-linha"><span></span></span></span></button></li>
+        <li><button type="button" class="res-abre" data-r="2.0833" data-a="fotos/caso4-antes.jpg" data-d="fotos/caso4-depois.jpg" aria-label="Ver o caso 4 de 6 ampliado"><span class="ad"><img class="ad-antes" src="fotos/caso4-antes-p.jpg" width="600" height="600" loading="lazy" decoding="async" alt=""><img class="ad-depois" src="fotos/caso4-depois-p.jpg" width="600" height="600" loading="lazy" decoding="async" alt=""><span class="tag t-antes">Antes</span><span class="tag t-depois">Depois</span><span class="ad-linha"><span></span></span></span></button></li>
+        <li><button type="button" class="res-abre" data-r="1.6897" data-a="fotos/caso5-antes.jpg" data-d="fotos/caso5-depois.jpg" aria-label="Ver o caso 5 de 6 ampliado"><span class="ad"><img class="ad-antes" src="fotos/caso5-antes-p.jpg" width="600" height="600" loading="lazy" decoding="async" alt=""><img class="ad-depois" src="fotos/caso5-depois-p.jpg" width="600" height="600" loading="lazy" decoding="async" alt=""><span class="tag t-antes">Antes</span><span class="tag t-depois">Depois</span><span class="ad-linha"><span></span></span></span></button></li>
+        <li><button type="button" class="res-abre" data-r="0.677" data-a="fotos/caso6-antes.jpg" data-d="fotos/caso6-depois.jpg" aria-label="Ver o caso 6 de 6 ampliado"><span class="ad"><img class="ad-antes" src="fotos/caso6-antes-p.jpg" width="600" height="600" loading="lazy" decoding="async" alt=""><img class="ad-depois" src="fotos/caso6-depois-p.jpg" width="600" height="600" loading="lazy" decoding="async" alt=""><span class="tag t-antes">Antes</span><span class="tag t-depois">Depois</span><span class="ad-linha"><span></span></span></span></button></li>
       </ul>
-      <small>Casos publicados pela Sul Odonto no Instagram, sempre com o antes e o depois do mesmo paciente.</small>
+      <small>Casos publicados pela Sul Odonto no Instagram, sempre com o antes e o depois do mesmo paciente. Toque no caso para ampliar e arrastar a barra.</small>
+      <dialog class="zoom" id="zoom" aria-label="Caso ampliado, antes e depois">
+        <div class="ad ad-grande" id="z-ad">
+          <img class="ad-antes" id="z-antes" alt="">
+          <img class="ad-depois" id="z-depois" alt="">
+          <span class="tag t-antes">Antes</span><span class="tag t-depois">Depois</span>
+          <span class="ad-linha" aria-hidden="true"><span></span></span>
+          <input type="range" min="0" max="100" value="50" aria-label="Arraste para comparar o antes e o depois">
+        </div>
+        <p class="zoom-rodape"><span id="zoom-cont" aria-live="polite">Caso 1 de 6</span><small>Arraste a barra para comparar</small></p>
+        <button type="button" class="z-bt z-fecha" aria-label="Fechar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+        <button type="button" class="z-bt z-ant" aria-label="Caso anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button type="button" class="z-bt z-prox" aria-label="Próximo caso"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+      </dialog>
     </div>
+    <!-- FIM DO BLOCO RESULTADOS -->
   </div>
 </section>
 
@@ -520,6 +609,7 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
   <div class="wrap">
     <div class="aval-topo">
       <div>
+        <span class="estrelas" aria-hidden="true"><svg style="--i:0"><use href="#estrela"/></svg><svg style="--i:1"><use href="#estrela"/></svg><svg style="--i:2"><use href="#estrela"/></svg><svg style="--i:3"><use href="#estrela"/></svg><svg style="--i:4"><use href="#estrela"/></svg></span>
         <h2>Nota 4,9 em <span data-conta="62" data-ver>62</span> avaliações no Google</h2>
         <p class="intro">Algumas das coisas que os pacientes escreveram sobre a clínica.</p>
       </div>
@@ -533,6 +623,50 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
       <li><q>Excelente, profissional, competente e atenciosa, clínica top.</q><cite>Rodolfo, no Google</cite></li>
       <li><q>Estou muito satisfeita com o trabalho realizado com o atendimento, cumprimento das datas e qualidade da prótese que adquiri.</q><cite>Zilma, no Google</cite></li>
     </ul>
+  </div>
+</section>
+
+<section class="secao" id="duvidas">
+  <div class="wrap duvidas">
+    <div class="duv-cab">
+      <h2>Perguntas frequentes</h2>
+      <p class="intro">O básico para marcar sua consulta sem complicação.</p>
+      <div class="duv-zap">
+        <img class="duv-masc" src="fotos/mascote.jpg" width="400" height="400" loading="lazy" decoding="async" alt="">
+        <p>Não achou sua dúvida? Pergunte direto para a clínica.</p>
+        <a class="btn btn-zap" href="https://wa.me/5551991465694?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Sul%20Odonto%20e%20tenho%20uma%20d%C3%BAvida." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#zap"/></svg>Perguntar no WhatsApp</a>
+      </div>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Como marco uma consulta?<span class="mais" aria-hidden="true"></span></summary>
+        <p>Pelo WhatsApp da clínica, (51) 99146-5694. Se quiser, use o <a href="#tratamentos">cartão de agendamento</a> aqui do site: você escolhe o tratamento e o horário, e a mensagem chega pronta.</p>
+      </details>
+      <details>
+        <summary>Não sei qual tratamento preciso. E agora?<span class="mais" aria-hidden="true"></span></summary>
+        <p>Sem problema. É só pedir uma avaliação. Na consulta, você conhece as opções para o seu caso e entende cada etapa.</p>
+      </details>
+      <details>
+        <summary>Quais tratamentos a clínica faz?<span class="mais" aria-hidden="true"></span></summary>
+        <p>Limpeza, clareamento, restaurações, tratamento de canal, extração de siso, implantes, próteses, facetas em resina, ortodontia (aparelho) e periodontia (gengiva).</p>
+      </details>
+      <details>
+        <summary>Estou com dor. Como aviso que é urgente?<span class="mais" aria-hidden="true"></span></summary>
+        <p>No <a href="#tratamentos">cartão de agendamento</a>, ligue a opção “Estou com dor, é urgente”. A mensagem chega no WhatsApp da clínica já avisando que é urgência.</p>
+      </details>
+      <details>
+        <summary>Qual é o horário de atendimento?<span class="mais" aria-hidden="true"></span></summary>
+        <p>De segunda a sexta, das 9h às 19h. Aos sábados, das 9h às 12h. Domingo a clínica fica fechada.</p>
+      </details>
+      <details>
+        <summary>Como chego de trem?<span class="mais" aria-hidden="true"></span></summary>
+        <p>Na saída da estação do trem, siga para o lado da prefeitura. A clínica fica na R. Otaviano Silveira, 115, no Centro.</p>
+      </details>
+      <details>
+        <summary>A entrada é acessível?<span class="mais" aria-hidden="true"></span></summary>
+        <p>Sim. A entrada da clínica é acessível para cadeira de rodas.</p>
+      </details>
+    </div>
   </div>
 </section>
 
@@ -570,7 +704,7 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
         <div class="fachada"><img src="fotos/fachada.jpg" width="1195" height="896" loading="lazy" alt="Fachada da Sul Odonto, prédio branco com a placa da clínica"></div>
         <div class="mini">
           <img src="fotos/consultorio.jpg" width="1200" height="900" loading="lazy" alt="Cadeira odontológica azul em um dos consultórios">
-          <a href="https://www.instagram.com/sulodontors/" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#0057C8" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="#17305C" stroke="none"/></svg>@sulodontors<small>Casos e novidades no Instagram</small></a>
+          <a href="https://www.instagram.com/sulodontors/" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#0057C8" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="#0057C8" stroke="none"/></svg>@sulodontors<small>Casos e novidades no Instagram</small></a>
         </div>
         <iframe class="mapa" title="Mapa com a localização da Sul Odonto" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Sul%20Odonto%2C%20R.%20Otaviano%20Silveira%2C%20115%2C%20Sapucaia%20do%20Sul&amp;output=embed"></iframe>
       </div>
@@ -584,6 +718,7 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
   <div class="wrap">
     <span class="marca"><img class="logo" src="fotos/logo.png" alt="" width="640" height="641"><span class="txt"><strong>Sul Odonto</strong><small>DENTISTA</small></span></span>
     <p>R. Otaviano Silveira, 115, Centro, Sapucaia do Sul, RS<br>Responsável técnica: Suzana Aparecida S. Suarez, CRO-RS 10704</p>
+    <p class="rodape-links"><a href="https://wa.me/5551991465694" target="_blank" rel="noopener">WhatsApp (51) 99146-5694</a><a href="https://www.instagram.com/sulodontors/" target="_blank" rel="noopener">Instagram @sulodontors</a></p>
     <p class="credito">Site feito por <a href="https://wa.me/5551986460227" target="_blank" rel="noopener">Thales dos Santos Leal</a></p>
   </div>
 </footer>
@@ -714,31 +849,81 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
   botoes.forEach(function(b){ b.addEventListener('click', carimbar); });
   document.querySelectorAll('input[name=periodo]').forEach(function(r){ r.addEventListener('change', carimbar); });
 
-  // comparador antes e depois
-  // (o bloco antes/depois pode ser removido do HTML sem quebrar o resto)
-  var comp = document.getElementById('comparador');
-  var faixa = comp ? comp.querySelector('input') : null;
-  var mexido = false;
-  function pos(v){ comp.style.setProperty('--pos', v + '%'); faixa.value = v; }
-  if (faixa) faixa.addEventListener('input', function(){ mexido = true; pos(faixa.value); });
-  function varrer(){
-    if (!comp || !anima || mexido) return;
-    var pts = [50, 84, 16, 50], dur = 2800, t0 = null;
-    function passo(t){
-      if (mexido) return;
-      if (!t0) t0 = t;
-      var p = Math.min(1, (t - t0) / dur), seg = p * 3, i = Math.min(2, Math.floor(seg)), q = seg - i;
-      q = q < .5 ? 2 * q * q : 1 - Math.pow(-2 * q + 2, 2) / 2;
-      pos(Math.round((pts[i] + (pts[i + 1] - pts[i]) * q) * 10) / 10);
-      if (p < 1) requestAnimationFrame(passo);
+  // antes e depois: a barra passa sozinha e pode ser arrastada
+  // (os blocos de antes e depois podem ser removidos do HTML sem quebrar o resto)
+  function comparador(el){
+    var faixa = el.querySelector('input'), mexido = false, vez = 0;
+    function pos(v){ el.style.setProperty('--pos', v + '%'); if (faixa) faixa.value = v; }
+    if (faixa) faixa.addEventListener('input', function(){ mexido = true; vez++; pos(faixa.value); });
+    function varrer(atraso, pts, dur){
+      if (!anima || mexido) return;
+      var minha = ++vez, t0 = null;
+      pts = pts || [50, 84, 16, 50];
+      dur = dur || 2800;
+      function passo(t){
+        if (minha !== vez) return;
+        if (!t0) t0 = t;
+        var p = Math.min(1, (t - t0) / dur), n = pts.length - 1, seg = p * n, i = Math.min(n - 1, Math.floor(seg)), q = seg - i;
+        q = q < .5 ? 2 * q * q : 1 - Math.pow(-2 * q + 2, 2) / 2;
+        pos(Math.round((pts[i] + (pts[i + 1] - pts[i]) * q) * 10) / 10);
+        if (p < 1) requestAnimationFrame(passo);
+      }
+      setTimeout(function(){ if (minha === vez) requestAnimationFrame(passo); }, atraso == null ? 400 : atraso);
     }
-    setTimeout(function(){ requestAnimationFrame(passo); }, 400);
+    function zerar(){ mexido = false; vez++; pos(50); }
+    return { varrer: varrer, zerar: zerar };
+  }
+  var comp = document.getElementById('comparador');
+  var principal = comp ? comparador(comp) : null;
+  function varrer(){ if (principal) principal.varrer(); }
+
+  // miniaturas dos resultados: a barra passa uma vez, uma depois da outra, quando aparecem na tela
+  var minis = [].map.call(document.querySelectorAll('.res-abre .ad'), comparador);
+  function varrerMinis(){
+    minis.forEach(function(m, i){ m.varrer(300 + i * 260, [50, 78, 22, 50], 2200); });
+  }
+
+  // caso ampliado, com a mesma barra
+  var zoom = document.getElementById('zoom');
+  var fotos = document.querySelectorAll('.res-abre');
+  if (zoom && fotos.length && typeof zoom.showModal === 'function') {
+    var zAd = document.getElementById('z-ad'), zAntes = document.getElementById('z-antes'), zDepois = document.getElementById('z-depois');
+    var zFaixa = zAd.querySelector('input'), zCont = document.getElementById('zoom-cont');
+    var grande = comparador(zAd), atual = 0, pedido = 0;
+    function mostrar(i){
+      atual = (i + fotos.length) % fotos.length;
+      var b = fotos[atual], meu = ++pedido;
+      grande.zerar();
+      zAd.style.setProperty('--r', b.dataset.r);
+      zAntes.src = b.dataset.a;
+      zDepois.src = b.dataset.d;
+      zAntes.alt = 'Antes do tratamento, caso ' + (atual + 1);
+      zDepois.alt = 'Depois do tratamento, caso ' + (atual + 1);
+      zCont.textContent = 'Caso ' + (atual + 1) + ' de ' + fotos.length;
+      Promise.all([zAntes, zDepois].map(function(im){
+        return im.decode ? im.decode().catch(function(){}) : Promise.resolve();
+      })).then(function(){ if (meu === pedido && zoom.open) grande.varrer(150); });
+    }
+    fotos.forEach(function(b, i){
+      b.addEventListener('click', function(){ zoom.showModal(); mostrar(i); });
+    });
+    zoom.querySelector('.z-fecha').addEventListener('click', function(){ zoom.close(); });
+    zoom.querySelector('.z-ant').addEventListener('click', function(){ mostrar(atual - 1); });
+    zoom.querySelector('.z-prox').addEventListener('click', function(){ mostrar(atual + 1); });
+    zoom.addEventListener('keydown', function(e){
+      if (e.target === zFaixa) return;
+      if (e.key === 'ArrowLeft') { e.preventDefault(); mostrar(atual - 1); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); mostrar(atual + 1); }
+    });
+    // tocar fora do caso fecha
+    zoom.addEventListener('click', function(e){ if (e.target === zoom) zoom.close(); });
+    zoom.addEventListener('close', function(){ pedido++; grande.zerar(); });
   }
 
   // surgir ao rolar
   [['.secao h2',''],['.secao .intro',''],['.vidro',''],['.cartao',''],['.proteses ul',''],
    ['.fotos-pro .alta','clip'],['.fotos-pro .pilha img','clip'],['.cartaz',''],['.depo li','esq'],
-   ['.dados',''],['.fachada','clip'],['.mini',''],['.mapa','']].forEach(function(par){
+   ['.res-grade li',''],['.faq details',''],['.duv-zap',''],['.dados',''],['.fachada','clip'],['.mini',''],['.mapa','']].forEach(function(par){
     document.querySelectorAll(par[0]).forEach(function(el, i){
       el.setAttribute('data-rev', par[1]);
       el.style.transitionDelay = ((i % 3) * 110) + 'ms';
@@ -754,12 +939,13 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
         (alvos.get(e.target) || []).forEach(function(el){
           el.classList.add('visto');
           if (el.id === 'antes-depois') varrer();
+          if (el.classList.contains('res-grade')) varrerMinis();
           if (el.hasAttribute('data-ver')) contar(el);
         });
         io.unobserve(e.target);
       });
     }, { threshold: .12, rootMargin: '0px 0px -6% 0px' });
-    document.querySelectorAll('[data-rev], .trats, [data-ver]').forEach(function(el){
+    document.querySelectorAll('[data-rev], .trats, [data-ver], .res-grade').forEach(function(el){
       var alvo = el.getAttribute('data-rev') === 'clip' ? el.parentElement : el;
       if (!alvos.has(alvo)) { alvos.set(alvo, []); io.observe(alvo); }
       alvos.get(alvo).push(el);
