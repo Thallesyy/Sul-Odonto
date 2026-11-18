@@ -276,6 +276,8 @@ html:has(.zoom[open]){overflow:hidden}
 .tour-cab{padding:64px 0 28px;background:var(--papel)}
 .tour{position:relative;background:var(--papel)}
 .tour-passos{list-style:none;margin:0;padding:0}
+.tour-lista{position:relative}
+.tour-indicador{display:none}
 .tour-passo b{display:block;color:var(--marinho);font-size:1.15rem;line-height:1.25}
 .tour-passo span{display:block;margin-top:4px;color:var(--suave)}
 .tour-tela{position:relative}
@@ -298,16 +300,16 @@ html:has(.zoom[open]){overflow:hidden}
   .tour:not(.parado) .tour-tela{position:absolute;inset:0}
   .tour:not(.parado) canvas{width:100%;height:100%}
   .tour:not(.parado) .tour-tela::after{content:"";position:absolute;left:0;right:0;bottom:0;height:45%;background:linear-gradient(transparent,rgba(6,22,56,.75));pointer-events:none}
-  .tour:not(.parado) .tour-passos{position:absolute;left:16px;right:16px;bottom:92px;z-index:2;min-height:96px}
-  .tour:not(.parado) .tour-passo{position:absolute;left:0;right:0;bottom:0;background:#fff;border-radius:18px;padding:16px 18px;box-shadow:0 14px 30px -14px rgba(0,0,0,.5);opacity:0;transform:translateY(22px) scale(.98);filter:blur(6px);transition:opacity .6s ease,transform .7s cubic-bezier(.2,.8,.2,1),filter .6s ease}
-  .tour:not(.parado) .tour-passo.ativo{opacity:1;transform:none;filter:none}
+  .tour:not(.parado) .tour-lista{position:absolute;left:16px;right:16px;bottom:92px;z-index:2;min-height:96px}
+  .tour:not(.parado) .tour-passo{position:absolute;left:0;right:0;bottom:0;background:#fff;border-radius:18px;padding:16px 18px;box-shadow:0 14px 30px -14px rgba(0,0,0,.5);opacity:0;will-change:opacity,transform}
 }
 @media(min-width:900px){
   .tour:not(.parado) .tour-fixo{max-width:1120px;margin:0 auto;padding:0 20px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:72px}
   .tour:not(.parado) .tour-tela{height:min(80vh,760px);aspect-ratio:464/832;border-radius:30px;overflow:hidden;box-shadow:0 0 0 6px #fff,0 30px 60px -30px rgba(6,22,56,.6)}
   .tour:not(.parado) canvas{width:100%;height:100%}
-  .tour:not(.parado) .tour-passo{padding:16px 0 16px 22px;border-left:3px solid var(--linha);opacity:.35;transform:translateX(0);transition:opacity .6s ease,border-color .6s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
-  .tour:not(.parado) .tour-passo.ativo{opacity:1;border-left-color:var(--celeste);transform:translateX(8px)}
+  .tour:not(.parado) .tour-lista::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;border-radius:3px;background:var(--linha)}
+  .tour:not(.parado) .tour-indicador{display:block;position:absolute;left:0;top:0;width:3px;height:0;border-radius:3px;background:var(--celeste);z-index:1;will-change:transform,height}
+  .tour:not(.parado) .tour-passo{padding:16px 0 16px 22px;opacity:.35;will-change:opacity,transform}
   .tour:not(.parado) .tour-passo b{font-size:1.4rem}
 }
 
@@ -708,6 +710,8 @@ html:has(.zoom[open]){overflow:hidden}
 </section>
 <section class="tour parado" id="tour" data-n="280" aria-label="Passeio em vídeo pela clínica">
   <div class="tour-fixo">
+    <div class="tour-lista">
+    <span class="tour-indicador" aria-hidden="true"></span>
     <ol class="tour-passos">
           <li class="tour-passo" data-de="0.000" data-ate="0.089"><b>R. Otaviano Silveira, 115</b><span>No Centro de Sapucaia, pertinho da estação do trem.</span></li>
           <li class="tour-passo" data-de="0.089" data-ate="0.196"><b>A placa na calçada</b><span>A placa azul da Sul Odonto aponta a entrada.</span></li>
@@ -716,6 +720,7 @@ html:has(.zoom[open]){overflow:hidden}
           <li class="tour-passo" data-de="0.518" data-ate="0.696"><b>A recepção</b><span>Poltronas para esperar com calma pela sua vez.</span></li>
           <li class="tour-passo" data-de="0.696" data-ate="1.001"><b>O consultório</b><span>Onde acontece a sua avaliação.</span></li>
     </ol>
+    </div>
     <div class="tour-tela">
       <canvas width="464" height="832" aria-hidden="true"></canvas>
       <video src="fotos/clinica.mp4" poster="fotos/clinica-poster.jpg" width="464" height="832" controls muted playsinline preload="none" aria-label="Vídeo mostrando a fachada, a placa na calçada, a vitrine, a entrada, a recepção e o consultório da Sul Odonto"></video>
@@ -1019,7 +1024,38 @@ html:has(.zoom[open]){overflow:hidden}
     tour.classList.remove('parado');
     var cv = tour.querySelector('canvas'), ctx = cv.getContext('2d');
     var N = +tour.dataset.n, quadros = new Array(N), pronto = new Array(N);
-    var passosT = tour.querySelectorAll('.tour-passo'), barra = tour.querySelector('.tour-barra');
+    var passosT = [].slice.call(tour.querySelectorAll('.tour-passo')), barra = tour.querySelector('.tour-barra');
+    var indicador = tour.querySelector('.tour-indicador'), largo = window.matchMedia('(min-width: 900px)');
+    var JANELA = .03; // quanto da rolagem dura a passagem de um passo para o outro
+    function suave(x){ x = Math.min(1, Math.max(0, x)); return x * x * (3 - 2 * x); }
+    // 0 fora do passo, 1 no meio dele, subindo e descendo devagar nas bordas
+    function forca(el, p){
+      var de = +el.dataset.de, ate = +el.dataset.ate;
+      var entra = de === 0 ? 1 : suave((p - de + JANELA) / (2 * JANELA));
+      var sai = ate >= 1 ? 1 : suave((ate + JANELA - p) / (2 * JANELA));
+      return Math.min(entra, sai);
+    }
+    function passos(p){
+      var topo = 0, alt = 0, soma = 0;
+      passosT.forEach(function(el){
+        var f = forca(el, p);
+        el.classList.toggle('ativo', f > .5);
+        if (largo.matches) {
+          el.style.opacity = (.35 + .65 * f).toFixed(3);
+          el.style.transform = 'translateX(' + (8 * f).toFixed(2) + 'px)';
+          topo += el.offsetTop * f; alt += el.offsetHeight * f; soma += f;
+        } else {
+          // um cartão sai antes do outro entrar, para os textos não se misturarem
+          var g = suave((f - .4) / .6);
+          el.style.opacity = g.toFixed(3);
+          el.style.transform = 'translateY(' + (18 * (1 - g)).toFixed(2) + 'px) scale(' + (.97 + .03 * g).toFixed(4) + ')';
+        }
+      });
+      if (largo.matches && soma) {
+        indicador.style.transform = 'translateY(' + (topo / soma).toFixed(1) + 'px)';
+        indicador.style.height = (alt / soma).toFixed(1) + 'px';
+      }
+    }
     var atualP = 0, alvoP = 0, rodando = false, carregou = false;
     function nome(i){ return 'fotos/tour/f' + ('00' + (i + 1)).slice(-3) + '.webp'; }
     // quadro carregado mais perto, para trás e para frente
@@ -1042,7 +1078,7 @@ html:has(.zoom[open]){overflow:hidden}
     }
     function mostra(p){
       desenha(p * (N - 1));
-      passosT.forEach(function(el){ el.classList.toggle('ativo', p >= +el.dataset.de && p < +el.dataset.ate); });
+      passos(p);
       barra.style.setProperty('--p', p.toFixed(4));
     }
     function quadro(){
@@ -1098,7 +1134,7 @@ html:has(.zoom[open]){overflow:hidden}
       }, { rootMargin: '200% 0px' }).observe(tour);
     } else { carregar(); }
     window.addEventListener('scroll', rolar, { passive: true });
-    window.addEventListener('resize', function(){ medir(); rolar(); });
+    window.addEventListener('resize', function(){ passosT.forEach(function(el){ el.style.opacity = ''; el.style.transform = ''; }); medir(); rolar(); });
     atualP = alvoP = progresso();
   }
 
